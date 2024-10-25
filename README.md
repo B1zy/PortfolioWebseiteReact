@@ -36,7 +36,6 @@ Die Webseite wird intuitiv und responsive gestaltet. Später will ich auch die W
 
 
 ### 1.3 Testfälle
-### 1.3 Testfälle
 
 | TC-№ | Ausgangslage                                                 | Eingabe                                 | Erwartete Ausgabe                                            |
 | ---- | ------------------------------------------------------------ | --------------------------------------- | ------------------------------------------------------------ |
