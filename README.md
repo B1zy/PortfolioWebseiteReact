@@ -83,8 +83,8 @@ Die Webseite wird intuitiv und responsive gestaltet. Später will ich auch die W
 | 3.1  | 25.10.2024  | Die Dokumentation des gewählten Projekts wird angezeigt. | Kamil  |
 | 4.1  | 25.10.2024  | Ein Link zum GitHub-Repository wird auf der Projektseite angezeigt. | Kamil  |
 | 5.1  | 25.10.2024  | Die Webseite wird responsive dargestellt und korrekt angezeigt. | Kamil  |
-| 6.1  | 25.10.2024  | Die Webseite wird vom eigenen Server geladen.        | Kamil  |
-| 7.1  | 25.10.2024  | Die Webseite lädt schnell und alle Inhalte werden angezeigt. | Kamil  |
+| 6.1  | 25.10.2024  | Die Webseite wird vom eigenen nicht Server geladen.        | Kamil  |
+| 7.1  | 25.10.2024  | Die Webseite lädt nicht  und keine Inhalte werden angezeigt. | Kamil  |
 
 
 
