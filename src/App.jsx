@@ -5,6 +5,11 @@ import { getRandomColorCombination } from './randomColor'; // Import the random 
 import HomePage from './Homepage';
 import ContactPage from './ContactPage';
 import Projects from './Projects'; // Import the Projects component
+import GeographieQuizDocumentation from './GeographieQuizDocumentation';
+import MemeGeneratorDocumentation from './MemeGeneratorDocumentation';
+import MittagessenplanerDocumentation from './MittagessenplanerDocumentation';
+import VerschluesselungDocumentation from './VerschluesselungDocumentation';
+import Footer from './Footer'; // Import the Footer component
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './styles.css';
 
@@ -86,7 +91,7 @@ function App() {
         <nav className="navbar">
           <ul>
             <li><Link to="/">Home</Link></li>
-            <li><Link to="/projects">Projects</Link></li> {/* Projects added to navigation */}
+            <li><Link to="/projects">Projects</Link></li>
             <li><Link to="/contact">Contact</Link></li>
           </ul>
         </nav>
@@ -94,10 +99,15 @@ function App() {
       <div className="app-container">
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/projects" element={<Projects />} /> {/* Route for Projects */}
+          <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/geographie-quiz" element={<GeographieQuizDocumentation />} />
+          <Route path="/meme-generator" element={<MemeGeneratorDocumentation />} />
+          <Route path="/mittagessenplaner" element={<MittagessenplanerDocumentation />} />
+          <Route path="/verschlusselungswebseite" element={<VerschluesselungDocumentation />} />
         </Routes>
       </div>
+      <Footer /> {/* Adding the Footer here */}
     </Router>
   );
 }
