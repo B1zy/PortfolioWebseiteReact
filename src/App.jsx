@@ -1,70 +1,104 @@
-
 import React from 'react';
-import './App.css';
+import Particles from 'react-tsparticles';
+import { loadFull } from 'tsparticles';
+import { getRandomColorCombination } from './randomColor'; // Import the random color function
+import HomePage from './Homepage';
+import ContactPage from './ContactPage';
+import Projects from './Projects'; // Import the Projects component
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import './styles.css';
 
 function App() {
+  const particlesInit = async (main) => {
+    await loadFull(main);
+  };
+
+  const [color1, color2] = getRandomColorCombination(); // Get a random color combination
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Willkommen auf meiner Portfolio-Seite!</h1>
-        <p>Hier finden Sie meine Projekte und können mich kontaktieren.</p>
+    <Router>
+      <Particles
+        id="tsparticles"
+        init={particlesInit}
+        options={{
+          background: {
+            color: {
+              value: "#131313", // Keep a base dark background
+            },
+          },
+          fpsLimit: 60,
+          interactivity: {
+            events: {
+              onHover: {
+                enable: true,
+                mode: "repulse",
+              },
+              resize: true,
+            },
+          },
+          particles: {
+            color: {
+              value: [color1, color2], // Use the random color combination for particles
+            },
+            links: {
+              color: "#ffffff",
+              distance: 150,
+              enable: true,
+              opacity: 0.5,
+              width: 1,
+            },
+            collisions: {
+              enable: true,
+            },
+            move: {
+              direction: "none",
+              enable: true,
+              outMode: "bounce",
+              random: false,
+              speed: 2,
+              straight: false,
+            },
+            number: {
+              density: {
+                enable: true,
+                area: 800,
+              },
+              value: 80,
+            },
+            opacity: {
+              value: 0.5,
+            },
+            shape: {
+              type: "circle",
+            },
+            size: {
+              random: true,
+              value: 5,
+            },
+          },
+          detectRetina: true,
+        }}
+      />
+      <header className="header">
+        <div className="logo">
+          <Link to="/">My Portfolio</Link>
+        </div>
+        <nav className="navbar">
+          <ul>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/projects">Projects</Link></li> {/* Projects added to navigation */}
+            <li><Link to="/contact">Contact</Link></li>
+          </ul>
+        </nav>
       </header>
-
-      <main>
-        <section id="contact">
-          <h2>Kontaktinformationen</h2>
-          <p><strong>Name:</strong> Kamil Bielski</p>
-          <p><strong>Email:</strong> kamil.bielski@example.com</p>
-          <p><strong>Telefon:</strong> +49 123 456789</p>
-        </section>
-        
-        <section id="contact-form">
-          <h2>Kontaktformular</h2>
-          <ContactForm />
-        </section>
-      </main>
-
-      <footer>
-        <p>&copy; 2024 Kamil Bielski. Alle Rechte vorbehalten.</p>
-      </footer>
-    </div>
-  );
-}
-
-function ContactForm() {
-  const [formData, setFormData] = React.useState({ name: '', email: '', message: '' });
-  const [formStatus, setFormStatus] = React.useState('');
-
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Hier könntest du eine API-Anfrage senden
-    setFormStatus('Vielen Dank für Ihre Nachricht!');
-  };
-
-  return (
-    <form onSubmit={handleSubmit}>
-      <div>
-        <label htmlFor="name">Name:</label>
-        <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} required />
+      <div className="app-container">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/projects" element={<Projects />} /> {/* Route for Projects */}
+          <Route path="/contact" element={<ContactPage />} />
+        </Routes>
       </div>
-      <div>
-        <label htmlFor="email">Email:</label>
-        <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} required />
-      </div>
-      <div>
-        <label htmlFor="message">Nachricht:</label>
-        <textarea id="message" name="message" value={formData.message} onChange={handleChange} required></textarea>
-      </div>
-      <button type="submit">Absenden</button>
-      {formStatus && <p>{formStatus}</p>}
-    </form>
+    </Router>
   );
 }
 
