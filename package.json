@@ -2,6 +2,7 @@
   "name": "protfoliowebseitereact",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://B1zy.github.io/ProtfolioWebseiteReact",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -9,7 +10,9 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "serve": "vite preview",
-    "test": "jest"
+    "test": "jest",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "axios": "^1.7.7",
