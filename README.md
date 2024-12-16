@@ -1,14 +1,17 @@
 # Projekt-Dokumentation
 
-☝️ Alle Text-Stellen, welche mit einem ✍️ beginnen, können Sie löschen, sobald Sie die entsprechende Stellen ausgefüllt haben.
 
 Kamil Bielski
 
-| Datum | Version | Zusammenfassung                                              |
-| ----- | ------- | ------------------------------------------------------------ |
-|       | 0.0.1   | einführung react |
-|       | ...     |                                                              |
-|       | 1.0.0   |                                                              |
+| Datum       | Version | Zusammenfassung                                              |
+| ----------- | ------- | ------------------------------------------------------------ |
+| 8/23/2024   | 0.0.1   | Einführung in React, Aufbau der Projektstruktur               |
+| 8/30/2024   | 0.1.0   | Grundlegendes Setup von React-Routing und Particles-Integration |
+| 9/6/2024    | 0.2.0   | Erstellung erster Projektkomponenten (HomePage, ContactPage)  |
+| 9/13/2024   | 0.3.0   | Implementierung der Projektdokumentationen, erste Entwürfe für Design |
+| 10/18/2024  | 0.9.0   | Verbesserungen der Projektdokumentationen und Anpassungen der Navigation, Hinzufügen der Video-Hover-Funktion für Projekte |
+| 10/25/2024  | 1.0.0   | Letzte Überarbeitung, Style-Finishing, Footer und Abschluss der Projektdokumentationen, Projektabgabe |
+
 
 ## 1 Informieren
 
@@ -31,9 +34,7 @@ Die Webseite wird intuitiv und responsive gestaltet. Später will ich auch die W
 | 7    | Muss            | Qualität   | Als ein Nutzer möchte ich, dass die Webseite schnell lädt, damit ich eine angenehme Nutzungserfahrung habe. |
 
 
-✍️ Jede User Story hat eine ganzzahlige Nummer (1, 2, 3 etc.), eine Verbindlichkeit (Muss oder Kann?), und einen Typ (Funktional, Qualität, Rand). Die User Story selber hat folgende Form: *Als ein 🤷‍♂️ möchte ich 🤷‍♂️, damit 🤷‍♂️*.
 
-### 1.3 Testfälle
 ### 1.3 Testfälle
 
 | TC-№ | Ausgangslage                                                 | Eingabe                                 | Erwartete Ausgabe                                            |
@@ -47,7 +48,6 @@ Die Webseite wird intuitiv und responsive gestaltet. Später will ich auch die W
 | 7.1  | Webseite ist auf einem Server mit allen Inhalten.            | Seite wird aufgerufen                   | Die Webseite lädt schnell und alle Inhalte werden angezeigt.  |
 
 
-✍️ Die Nummer hat das Format `N.m`, wobei `N` die Nummer der User Story ist, die der Testfall abdeckt, und `m` von `1` an nach oben gezählt. Beispiel: Der dritte Testfall, der die zweite User Story abdeckt, hat also die Nummer `2.3`.
 
 
 ## 2 Planen
@@ -68,22 +68,25 @@ Die Webseite wird intuitiv und responsive gestaltet. Später will ich auch die W
 | 7.A  | 11/01/2024  | Kamil Bielski  | Endgültiges Portfolio der Projekte erstellen                                  | 45'           |
 
 
-✍️ Die Nummer hat das Format `N.m`, wobei `N` die Nummer der User Story ist, auf die sich das Arbeitspaket bezieht, und `m` von `A` an nach oben buchstabiert. Beispiel: Das dritte Arbeitspaket, das die zweite User Story betrifft, hat also die Nummer `2.C`.
-
-✍️ Ein Arbeitspaket sollte etwa 45' für eine Person in Anspruch nehmen. Die totale Anzahl Arbeitspakete sollte etwa Folgendem entsprechen: `Anzahl R-Sitzungen` ╳ `Anzahl Gruppenmitglieder` ╳ `4`. Wenn Sie also zu dritt an einem Projekt arbeiten, für welches zwei R-Sitzungen geplant sind, sollten Sie auf `2` ╳ `3` ╳`4` = `24` Arbeitspakete kommen. Sollten Sie merken, dass Sie hier nicht genügend Arbeitspakte haben, denken Sie sich weitere "Kann"-User Stories für Kapitel 1.2 aus.
 
 
 
 
 ## 5 Kontrollieren
 
-| TC-№ | Datum | Resultat | Tester |
-| ---- | ----- | -------- | ------ |
-| 1.1  |       |          |        |
-| ...  |       |          |        |
+## 5 Kontrollieren
 
-✍️ Vergessen Sie nicht, ein Fazit hinzuzufügen, welches das Test-Ergebnis einordnet.
+| TC-№ | Datum       | Resultat                                             | Tester |
+| ---- | ----------- | ---------------------------------------------------- | ------ |
+| 1.1  | 25.10.2024  | Kontaktinformationen werden auf der Startseite angezeigt. | Kamil  |
+| 2.1  | 25.10.2024  | Eine Liste der Projekte wird angezeigt.              | Kamil  |
+| 3.1  | 25.10.2024  | Die Dokumentation des gewählten Projekts wird angezeigt. | Kamil  |
+| 4.1  | 25.10.2024  | Ein Link zum GitHub-Repository wird auf der Projektseite angezeigt. | Kamil  |
+| 5.1  | 25.10.2024  | Die Webseite wird responsive dargestellt und korrekt angezeigt. | Kamil  |
+| 6.1  | 25.10.2024  | Die Webseite wird vom eigenen nicht Server geladen.        | Kamil  |
+| 7.1  | 25.10.2024  | Die Webseite lädt nicht  und keine Inhalte werden angezeigt. | Kamil  |
 
-## 6 Auswerten
 
-✍️ Fügen Sie hier eine Verknüpfung zu Ihrem Lern-Bericht ein.
+
+
+
