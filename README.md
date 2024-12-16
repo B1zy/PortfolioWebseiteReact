@@ -87,5 +87,6 @@ Die Webseite wird intuitiv und responsive gestaltet. Später will ich auch die W
 | 7.1  | 25.10.2024  | Die Webseite lädt nicht  und keine Inhalte werden angezeigt. | Kamil  |
 
 
+test
 
 
