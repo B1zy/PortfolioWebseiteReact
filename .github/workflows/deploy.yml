@@ -11,6 +11,8 @@ on:
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write  # Explicitly grant write permissions to the contents of the repository 
 
     steps:
       # Schritt 1: Repository auschecken
