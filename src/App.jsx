@@ -10,7 +10,7 @@ import MemeGeneratorDocumentation from './MemeGeneratorDocumentation';
 import MittagessenplanerDocumentation from './MittagessenplanerDocumentation';
 import VerschluesselungDocumentation from './VerschluesselungDocumentation';
 import Footer from './Footer'; // Import the Footer component
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { HashRouter as Router } from 'react-router-dom';
 import './styles.css';
 
 function App() {
