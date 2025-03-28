@@ -44,7 +44,7 @@ function App() {
                 value: "#131313",
               },
             },
-            fpsLimit: 120,
+            fpsLimit: 60,
             particles: {
               number: {
                 value: 80,
