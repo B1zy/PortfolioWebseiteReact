@@ -32,10 +32,10 @@ function MemeGeneratorDocumentation() {
       <section>
         <h3>Demonstration</h3>
         <p>Hier ist ein Bild vom Meme-Generator Interface:</p>
-        <img src="/images/116445-Screenshot 2024-01-06 171610.png" alt="Meme Generator Interface" style={{ maxWidth: '100%', height: 'auto', borderRadius: '10px' }} />
+        <img src="/PortfolioWebseiteReact/images/116445-Screenshot 2024-01-06 171610.png" alt="Meme Generator Interface" style={{ maxWidth: '100%', height: 'auto', borderRadius: '10px' }} />
         <p>Und hier ist ein kurzes Demonstrationsvideo des Meme-Generators:</p>
         <video controls style={{ maxWidth: '100%', borderRadius: '10px' }}>
-          <source src="/videos/116434-2024-01-06 16-06-33.mp4" type="video/mp4" />
+          <source src="/PortfolioWebseiteReact/videos/116434-2024-01-06 16-06-33.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </section>

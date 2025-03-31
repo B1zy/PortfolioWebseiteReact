@@ -32,7 +32,7 @@ function GeographieQuizDocumentation() {
           Jedes Modul stellt Fragen zu einem anderen geographischen Thema.
         </p>
         <p>Ein vorbereitender Schritt war das Erstellen eines Programmablaufplans:</p>
-        <img src="/images/geoquiz-flowchart.png" alt="Geographie Quiz Flowchart" />
+        <img src="/PortfolioWebseiteReact/images/geoquiz-flowchart.png" alt="Geographie Quiz Flowchart" />
         <p>Der Quellcode des Projekts befindet sich im <a href="https://github.com/B1zy/LA1301-Jahr-2/tree/main" target="_blank" rel="noopener noreferrer">GitHub-Repo</a>.</p>
       </section>
 
@@ -40,7 +40,7 @@ function GeographieQuizDocumentation() {
         <h3>Demonstration</h3>
         <p>
           Hier sieht man, dass ich auf die falsche Antwort geklickt habe und das Programm hat dies erkannt und mir mitgeteilt, dass ich die falsche Antwort gewählt habe.
-          <img src= "/images/111429-209092384-5d58bdca-0a9b-417f-97a6-1b3311c6ef0b.png" alt="Geographie Quiz Wrong Answer" />
+          <img src= "/PortfolioWebseiteReact/images/111429-209092384-5d58bdca-0a9b-417f-97a6-1b3311c6ef0b.png" alt="Geographie Quiz Wrong Answer" />
         </p>
       </section>
 

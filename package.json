@@ -6,8 +6,7 @@
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build -r https://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@github.com/B1zy/PortfolioWebseiteReact.git",
-       
+    "deploy": "gh-pages -d dist -r https://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@github.com/B1zy/PortfolioWebseiteReact.git",
     "dev": "vite",
     "start": "react-scripts start",
     "build": "vite build",
@@ -15,15 +14,18 @@
     "preview": "vite preview",
     "serve": "vite preview",
     "test": "jest"
-  
   },
-
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.7.2",
+    "aos": "^2.3.4",
     "axios": "^1.7.7",
+    "devicon": "^2.16.0",
+    "framer-motion": "^12.6.2",
     "gh-pages": "^6.3.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^6.27.0",
+    "react-router-dom": "^6.30.0",
+    "react-router-hash-link": "^2.4.3",
     "react-tsparticles": "^2.12.2",
     "tsparticles": "^3.5.0"
   },

@@ -49,12 +49,12 @@ function MittagessenplanerDocumentation() {
 
         <p>Hier ist eine Videodemonstration des Mittagessenplaners:</p>
         <video controls style={{ maxWidth: '100%', borderRadius: '10px' }}>
-          <source src="/videos/2024-06-16 21-11-36.mp4" type="video/mp4" />
+          <source src="/PortfolioWebseiteReact/videos/2024-06-16 21-11-36.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
 
         <p>Hier ist ein Screenshot der MongoDB-Benutzerdaten:</p>
-        <img src="/images/122288-Screenshot 2024-06-16 211919.png" alt="MongoDB Users" style={{ maxWidth: '100%', borderRadius: '10px', marginTop: '20px' }} />
+        <img src="/PortfolioWebseiteReact/images/122288-Screenshot 2024-06-16 211919.png" alt="MongoDB Users" style={{ maxWidth: '100%', borderRadius: '10px', marginTop: '20px' }} />
 
         <p>
           <a href="https://github.com/B1zy/LA1305-Jahr-2" target="_blank" rel="noopener noreferrer">Link zum GitHub Repo</a>

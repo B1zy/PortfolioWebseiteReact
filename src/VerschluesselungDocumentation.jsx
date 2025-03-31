@@ -72,11 +72,11 @@ function VerschluesselungDocumentation() {
 
         <h4>Beispiele:</h4>
         <p>Verschlüsselte Nachricht mit richtigen Schlüssel:</p>
-        <img src="/images/119301-Screenshot 2024-03-15 105549.png" alt="Falscher Schlüssel" style={{ maxWidth: '100%', borderRadius: '10px', marginTop: '20px' }} />
+        <img src="/PortfolioWebseiteReact/images/119301-Screenshot 2024-03-15 105549.png" alt="Falscher Schlüssel" style={{ maxWidth: '100%', borderRadius: '10px', marginTop: '20px' }} />
 
         <h4>Videodemonstration</h4>
         <video controls style={{ maxWidth: '100%', borderRadius: '10px' }}>
-          <source src="/videos/2024-03-13 11-26-51.mp4" type="video/mp4" />
+          <source src="/PortfolioWebseiteReact/videos/2024-03-13 11-26-51.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </section>

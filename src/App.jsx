@@ -1,114 +1,160 @@
-import React from 'react';
+import React, { useRef, useEffect, useCallback } from 'react';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link'; // Need to install this package
 import Particles from 'react-tsparticles';
 import { loadFull } from 'tsparticles';
-import { getRandomColorCombination } from './randomColor'; // Import the random color function
-import HomePage from './Homepage';
-import ContactPage from './ContactPage';
-import Projects from './Projects'; // Import the Projects component
+import { getRandomColorCombination } from './randomColor';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useLocation } from 'react-router-dom';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import 'devicon/devicon.min.css';
+
+// Import section components
+import IntroSection from './sections/IntroSection';
+import AboutSection from './sections/AboutSection';
+import ProjectsSection from './sections/ProjectsSection';
+import ContactSection from './sections/ContactSection';
+import Footer from './Footer';
+
+// Import documentation pages
 import GeographieQuizDocumentation from './GeographieQuizDocumentation';
 import MemeGeneratorDocumentation from './MemeGeneratorDocumentation';
 import MittagessenplanerDocumentation from './MittagessenplanerDocumentation';
 import VerschluesselungDocumentation from './VerschluesselungDocumentation';
-import Footer from './Footer'; // Import the Footer component
-import { HashRouter as Router } from 'react-router-dom';
-import './styles.css';
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  
+  return null;
+}
 
 function App() {
-  const particlesInit = async (main) => {
-    await loadFull(main);
-  };
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
 
-  const [color1, color2] = getRandomColorCombination(); // Get a random color combination
+  const particlesInit = useCallback(async (engine) => {
+    await loadFull(engine);
+  }, []);
 
   return (
-    <Router>
+    <BrowserRouter basename="/PortfolioWebseiteReact">
+      <ScrollToTop />
       <Particles
         id="tsparticles"
         init={particlesInit}
         options={{
-          background: {
-            color: {
-              value: "#131313", // Keep a base dark background
-            },
-          },
-          fpsLimit: 60,
-          interactivity: {
-            events: {
-              onHover: {
-                enable: true,
-                mode: "repulse",
-              },
-              resize: true,
-            },
+          fullScreen: {
+            enable: true,
+            zIndex: -1
           },
           particles: {
-            color: {
-              value: [color1, color2], // Use the random color combination for particles
-            },
-            links: {
-              color: "#ffffff",
-              distance: 150,
-              enable: true,
-              opacity: 0.5,
-              width: 1,
-            },
-            collisions: {
-              enable: true,
-            },
-            move: {
-              direction: "none",
-              enable: true,
-              outMode: "bounce",
-              random: false,
-              speed: 2,
-              straight: false,
-            },
             number: {
+              value: 80,
               density: {
                 enable: true,
-                area: 800,
-              },
-              value: 80,
+                value_area: 800
+              }
+            },
+            color: {
+              value: ["#ff0000", "#00ff00"]
+            },
+            shape: {
+              type: "circle"
             },
             opacity: {
               value: 0.5,
-            },
-            shape: {
-              type: "circle",
+              random: false
             },
             size: {
-              random: true,
-              value: 5,
+              value: 3,
+              random: true
             },
+            line_linked: {
+              enable: true,
+              distance: 150,
+              color: "#ffffff",
+              opacity: 0.4,
+              width: 1
+            },
+            move: {
+              enable: true,
+              speed: 2,
+              direction: "none",
+              random: false,
+              straight: false,
+              out_mode: "out",
+              bounce: false,
+            }
           },
-          detectRetina: true,
+          interactivity: {
+            detect_on: "canvas",
+            events: {
+              onhover: {
+                enable: true,
+                mode: "repulse"
+              },
+              onclick: {
+                enable: true,
+                mode: "push"
+              },
+              resize: true
+            }
+          },
+          retina_detect: true
         }}
       />
+      
       <header className="header">
         <div className="logo">
-          <Link to="/">My Portfolio</Link>
+          <HashLink smooth to="/#top">My Portfolio</HashLink>
         </div>
         <nav className="navbar">
           <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/projects">Projects</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
+            <li><HashLink smooth to="/#top">Home</HashLink></li>
+            <li><HashLink smooth to="/#about">About Me</HashLink></li>
+            <li><HashLink smooth to="/#projects">Projects</HashLink></li>
+            <li><HashLink smooth to="/#contact">Contact</HashLink></li>
           </ul>
         </nav>
       </header>
-      <div className="app-container">
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="/geographie-quiz" element={<GeographieQuizDocumentation />} />
-          <Route path="/meme-generator" element={<MemeGeneratorDocumentation />} />
-          <Route path="/mittagessenplaner" element={<MittagessenplanerDocumentation />} />
-          <Route path="/verschlusselungswebseite" element={<VerschluesselungDocumentation />} />
-        </Routes>
-      </div>
-      <Footer /> {/* Adding the Footer here */}
-    </Router>
+
+      <Routes>
+        {/* Main site is the default route */}
+        <Route path="/" element={
+          <div className="main-content">
+            <section id="top" className="intro-section">
+              <IntroSection />
+            </section>
+            
+            <section id="about" className="about-section">
+              <AboutSection />
+            </section>
+            
+            <section id="projects" className="projects-section">
+              <ProjectsSection />
+            </section>
+            
+            <section id="contact" className="contact-section">
+              <ContactSection />
+            </section>
+          </div>
+        } />
+        
+        {/* Documentation pages remain as separate routes */}
+        <Route path="/geographie-quiz" element={<GeographieQuizDocumentation />} />
+        <Route path="/meme-generator" element={<MemeGeneratorDocumentation />} />
+        <Route path="/mittagessenplaner" element={<MittagessenplanerDocumentation />} />
+        <Route path="/verschlusselungswebseite" element={<VerschluesselungDocumentation />} />
+      </Routes>
+      
+      <Footer />
+    </BrowserRouter>
   );
 }
 

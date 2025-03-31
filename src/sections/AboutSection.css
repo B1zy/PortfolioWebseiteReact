@@ -1,0 +1,114 @@
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+/* Bio section styles */
+.bio h3 {
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+.bio p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* Skills section styles */
+.skills-section h3 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+}
+
+.skills-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.skill-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100px;
+  transition: transform 0.3s ease;
+}
+
+.skill-icon:hover {
+  transform: translateY(-10px);
+}
+
+.skill-icon i {
+  font-size: 2.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.skill-icon span {
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* Traits section styles */
+.traits-section h3 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+}
+
+.traits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.trait-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.trait-card:hover {
+  transform: translateY(-10px);
+}
+
+.trait-card h4 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.trait-card p {
+  line-height: 1.5;
+  font-size: 0.9rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .traits-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+  
+  .skills-icons {
+    gap: 1.5rem;
+  }
+  
+  .skill-icon {
+    width: 80px;
+  }
+}
