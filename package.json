@@ -2,11 +2,11 @@
   "name": "protfoliowebseitereact",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://B1zy.github.io/PortfolioWebseiteReact",
+  "homepage": "https://B1zy.github.io/PortfolioWebseiteReact/",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist -r https://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@github.com/B1zy/PortfolioWebseiteReact.git",
+    "deploy": "gh-pages -d dist ",
     "dev": "vite",
     "start": "react-scripts start",
     "build": "vite build",
