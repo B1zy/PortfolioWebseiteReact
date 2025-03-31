@@ -39,7 +39,12 @@ function App() {
   }, []);
 
   const particlesInit = useCallback(async (engine) => {
+    console.log("Initializing tsParticles");
     await loadFull(engine);
+  }, []);
+
+  const particlesLoaded = useCallback(async (container) => {
+    console.log("Particles container loaded:", container);
   }, []);
 
   return (
@@ -48,62 +53,75 @@ function App() {
       <Particles
         id="tsparticles"
         init={particlesInit}
+        loaded={particlesLoaded}
         options={{
           fullScreen: {
             enable: true,
             zIndex: -1
           },
+          fpsLimit: 120,
           particles: {
             number: {
-              value: 80,
+              value: 100, // Increase particle count
               density: {
                 enable: true,
                 value_area: 800
               }
             },
             color: {
-              value: ["#ff0000", "#00ff00"]
+              value: ["#FF0000", "#FFFF00"] // Use vibrant colors
             },
             shape: {
               type: "circle"
             },
             opacity: {
-              value: 0.5,
-              random: false
+              value: 1, // More opaque
+              random: true // Some randomness in opacity
             },
             size: {
-              value: 3,
+              value: 4,
               random: true
             },
             line_linked: {
               enable: true,
               distance: 150,
-              color: "#ffffff",
-              opacity: 0.4,
-              width: 1
+              color: "#FFA500",
+              opacity: 0.6  ,
+              width: 1.5
             },
             move: {
               enable: true,
               speed: 2,
               direction: "none",
-              random: false,
+              random: true, // Random movement
               straight: false,
               out_mode: "out",
               bounce: false,
             }
           },
           interactivity: {
-            detect_on: "canvas",
+            detectsOn: "canvas",
             events: {
-              onhover: {
+              onHover: {
                 enable: true,
-                mode: "repulse"
+                mode: "grab" // Change to grab for a different effect
               },
-              onclick: {
+              onClick: {
                 enable: true,
                 mode: "push"
               },
               resize: true
+            },
+            modes: {
+              grab: {
+                distance: 140,
+                line_linked: {
+                  opacity: 1
+                }
+              },
+              push: {
+                particles_nb: 4
+              }
             }
           },
           retina_detect: true

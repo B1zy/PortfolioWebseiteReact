@@ -13,11 +13,11 @@ html, body {
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #131313;
-  color: #ffffff;
+  color: #ffffff; /* White text for better contrast */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background-color: #000000; /* Black background */
 }
 
 /* Particle Background */
@@ -27,7 +27,7 @@ body {
   height: 100%;
   top: 0;
   left: 0;
-  z-index: -1;
+  z-index: -1; /* Put it behind everything */
   pointer-events: none;
 }
 
@@ -47,7 +47,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: #1c1c1c;
+  background-color: rgba(0, 0, 0, 0.8) !important; /* Slightly more opaque for header/footer */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
@@ -166,11 +166,13 @@ section {
 h1 {
   font-size: 2.5rem;
   margin-block: 0.67em;
+  color: #ffffff;
 }
 
 .intro-section h1 {
   font-size: 3.5rem;
   margin-bottom: 0.3em;
+  color: #ffffff;
 }
 
 /* Projects Section */
@@ -195,7 +197,7 @@ h1 {
 .project-box {
   position: relative;
   padding: 20px;
-  background-color: rgba(30, 30, 30, 0.7);
+  background-color: rgba(20, 20, 20, 0.7); /* Darker semi-transparent for projects */
   color: white;
   border-radius: 8px;
   transition: transform 0.3s ease;
@@ -235,6 +237,7 @@ h1 {
 .project-description {
   position: relative;
   z-index: 2;
+  color: #ffffff;
 }
 
 .project-box a {
@@ -332,7 +335,8 @@ h1 {
 }
 
 .trait-card {
-  background-color: rgba(50, 50, 50, 0.7);
+  background: rgba(40, 40, 40, 0.7) !important; /* Dark, semi-transparent backgrounds */
+  backdrop-filter: blur(5px);
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -340,6 +344,7 @@ h1 {
   text-align: center;
   position: relative;
   z-index: 10; /* Higher z-index */
+  color: #ffffff;
 }
 
 .trait-card:hover {
@@ -361,6 +366,7 @@ h1 {
 .trait-card p {
   font-size: 0.9rem;
   line-height: 1.5;
+  color: #ffffff;
 }
 
 /* About Section - Bio */
@@ -387,6 +393,7 @@ h1 {
   font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 15px;
+  color: #ffffff;
 }
 
 .skills-section h3,
@@ -425,7 +432,9 @@ form {
   width: 100%;
   padding: 12px;
   font-size: 1rem;
-  border: 1px solid #ddd;
+  background-color: rgba(50, 50, 50, 0.8);
+  color: #ffffff;
+  border: 1px solid #444;
   border-radius: 8px;
   transition: border-color 0.3s;
 }
@@ -443,8 +452,8 @@ textarea {
 button {
   padding: 15px;
   font-size: 1rem;
-  background-color: #c35303;
-  color: white;
+  background-color: #f36c18; /* Use your accent color */
+  color: #ffffff;
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -479,6 +488,10 @@ button:hover {
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .contact-content {
@@ -494,6 +507,7 @@ button:hover {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  color: #ffffff;
 }
 
 .contact-item {
@@ -508,7 +522,7 @@ button:hover {
   gap: 15px;
 }
 
-.social-links a {
+social-links a {
   color: white;
   font-size: 1.5rem;
 }
@@ -521,7 +535,7 @@ button:hover {
 
 /* Footer Styles */
 .footer {
-  background-color: #1c1c1c;
+  background-color: rgba(0, 0, 0, 0.8) !important; /* Slightly more opaque for header/footer */
   color: #fff;
   padding: 20px;
   text-align: center;
@@ -544,18 +558,21 @@ button:hover {
   font-weight: bold;
   text-align: center;
   margin-bottom: 20px;
+  color: #ffffff;
 }
 
 .documentation h3 {
   font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 10px;
+  color: #ffffff;
 }
 
 .documentation p, .documentation ul {
   font-size: 1rem;
   line-height: 1.6;
   margin-bottom: 10px;
+  color: #ffffff;
 }
 
 /* Remove the min-height and padding requirements for documentation sections */
@@ -608,4 +625,33 @@ button:hover {
   .form-row {
     flex-direction: column;
   }
+}
+
+/* Add this to your main CSS file (src/index.css or App.css) */
+
+.main-content, .intro-section, .about-section, .projects-section, .contact-section {
+  background-color: transparent !important; /* Make sections transparent */
+  color: rgb(0, 0, 0); /* Light text on dark background */
+}
+
+/* Add some container styling to make content stand out */
+.about-container, .intro-container, .projects-container, .contact-container {
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Adjust card and trait backgrounds to be semi-transparent */
+div[style*="background: rgba(255, 255, 255, 0.1)"] {
+  background: rgba(40, 40, 40, 0.7) !important;
+}
+
+/* Additional modifications to ensure text visibility on dark background */
+a {
+  color: #ffffff;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  color: #ffffff;
 }
