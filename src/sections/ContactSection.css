@@ -1,0 +1,140 @@
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+  color: #cccccc;
+}
+
+.contact-content {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.contact-info {
+  flex: 1;
+  min-width: 250px;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.contact-item {
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.contact-item i {
+  margin-right: 1rem;
+  color: #f36c18;
+  font-size: 1.2rem;
+}
+
+.social-links {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.social-links a {
+  font-size: 1.5rem;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #f36c18;
+}
+
+.contact-form {
+  flex: 2;
+  min-width: 300px;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.form-result {
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.form-result.success {
+  background-color: rgba(46, 204, 113, 0.2);
+  color: #2ecc71;
+}
+
+.form-result.error {
+  background-color: rgba(231, 76, 60, 0.2);
+  color: #e74c3c;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.submit-button {
+  background-color: #f36c18;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.submit-button:hover {
+  background-color: #e05c08;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 10px rgba(243, 108, 24, 0.3);
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+  .contact-content {
+    flex-direction: column;
+  }
+  
+  .contact-info, 
+  .contact-form {
+    width: 100%;
+  }
+}

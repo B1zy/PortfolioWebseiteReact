@@ -59,7 +59,7 @@ function MemeGeneratorDocumentation() {
         <h4>Verifizierung der Ziele:</h4>
         <ul>
           <li>Z1: Es stehen einige Templates zur Verfügung.</li>
-          <li>Z2: Der Enduser kann den Text frei bestimmen.</li>
+          <li>Z2: Der Enduser kann den Text und die Position davon frei bestimmen.</li>
         </ul>
       </section>
     </div>

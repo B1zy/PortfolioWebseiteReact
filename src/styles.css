@@ -655,3 +655,61 @@ a {
 p, h1, h2, h3, h4, h5, h6 {
   color: #ffffff;
 }
+
+
+.custom-shape-divider-bottom-1743750583 {
+  position: absolute;
+  top: -163px; /* Adjust this value to control how much of the divider is visible */
+  left: -6%;
+  width: 130%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1743750583 svg {
+  position: relative;
+  display: block;
+  width: calc(129% + 1.3px);
+  height: 165px;
+}
+
+.custom-shape-divider-bottom-1743750583 .shape-fill {
+  fill: #F5A623;
+}
+
+.custom-shape-divider-top-1743757542 {
+  position: absolute;
+  padding-top: 100px;
+  bottom: -163px; /* Change from top: 0 to bottom: 0 */
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1743757542 svg {
+  position: relative;
+  display: block;
+  width: calc(129% + 1.3px);
+  height: 165px;
+}
+
+.custom-shape-divider-top-1743757542 .shape-fill {
+  fill: #F5A623;
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+  .custom-shape-divider-top-1743757542 svg {
+      width: calc(129% + 1.3px);
+      height: 117px;
+  }
+}
+/** For mobile devices **/
+@media (max-width: 767px) {
+  .custom-shape-divider-bottom-1743750583 svg {
+      width: calc(129% + 1.3px);
+      height: 117px;
+  }
+}

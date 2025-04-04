@@ -69,7 +69,7 @@ function App() {
               }
             },
             color: {
-              value: ["#FF0000", "#FFFF00"] // Use vibrant colors
+              value: [ "#FFFF00"] // Use vibrant colors
             },
             shape: {
               type: "circle"
@@ -141,7 +141,7 @@ function App() {
           </ul>
         </nav>
       </header>
-
+      
       <Routes>
         {/* Main site is the default route */}
         <Route path="/" element={
@@ -153,7 +153,7 @@ function App() {
             <section id="about" className="about-section">
               <AboutSection />
             </section>
-            
+             
             <section id="projects" className="projects-section">
               <ProjectsSection />
             </section>
@@ -163,7 +163,7 @@ function App() {
             </section>
           </div>
         } />
-        
+         
         {/* Documentation pages remain as separate routes */}
         <Route path="/geographie-quiz" element={<GeographieQuizDocumentation />} />
         <Route path="/meme-generator" element={<MemeGeneratorDocumentation />} />
