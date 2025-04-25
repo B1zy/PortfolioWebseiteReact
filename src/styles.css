@@ -918,13 +918,13 @@ p, h1, h2, h3, h4, h5, h6 {
 @media (max-width: 767px) {
   /* Top divider adjustments */
   .custom-shape-divider-bottom-1743750583 {
-    top: -100px; /* Reduce from -163px to bring it closer to content */
+    top: -99px; /* Reduce from -163px to bring it closer to content */
     transform: rotate(180deg) scaleY(0.7); /* Scale down vertically to reduce gap */
   }
   
   /* Bottom divider adjustments */
   .custom-shape-divider-top-1743757542 {
-    bottom: -100px; /* Reduce from -163px to bring it closer to content */
+    bottom: -107px; /* Reduce from -163px to bring it closer to content */
     padding-top: 60px; /* Reduce padding-top from 100px */
     transform: scaleY(0.7); /* Scale down vertically to reduce gap */
   }
