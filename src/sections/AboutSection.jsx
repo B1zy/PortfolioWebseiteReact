@@ -79,7 +79,7 @@ function AboutSection() {
             </div>
             <div className="profile-links">
               <a
-                href="/path/to/your-resume.pdf"
+                href="src/Modern Elegant Lebenslauf Beige Weiß-1.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="profile-link resume-link"
