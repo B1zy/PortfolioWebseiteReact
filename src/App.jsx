@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useCallback } from 'react';
+import React, { useRef, useEffect, useCallback, useState } from 'react';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link'; // Need to install this package
 import Particles from 'react-tsparticles';
@@ -35,7 +35,18 @@ function ScrollToTop() {
 }
 
 function App() {
-  const { t } = useTranslation(); // Add translation hook
+  const { t } = useTranslation();
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  
+  // Add this function to toggle the mobile menu
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen);
+  };
+  
+  // Close mobile menu when clicking a link
+  const closeMobileMenu = () => {
+    setMobileMenuOpen(false);
+  };
 
   useEffect(() => {
     AOS.init({ duration: 1000 });
@@ -135,7 +146,16 @@ function App() {
         <div className="logo">
           <HashLink smooth to="/#top">{t('nav.logo')}</HashLink>
         </div>
-        <nav className="navbar">
+        
+        {/* Mobile burger menu button */}
+        <div className="burger-menu-button" onClick={toggleMobileMenu}>
+          <div className={`burger-bar ${mobileMenuOpen ? 'open' : ''}`}></div>
+          <div className={`burger-bar ${mobileMenuOpen ? 'open' : ''}`}></div>
+          <div className={`burger-bar ${mobileMenuOpen ? 'open' : ''}`}></div>
+        </div>
+        
+        {/* Standard navigation for desktop */}
+        <nav className="navbar desktop-nav">
           <ul>
             <li><HashLink smooth to="/#top">{t('nav.home')}</HashLink></li>
             <li><HashLink smooth to="/#about">{t('nav.about')}</HashLink></li>
@@ -143,6 +163,18 @@ function App() {
             <li><HashLink smooth to="/#contact">{t('nav.contact')}</HashLink></li>
           </ul>
         </nav>
+        
+        {/* Mobile navigation overlay */}
+        <div className={`mobile-nav-overlay ${mobileMenuOpen ? 'open' : ''}`}>
+          <nav className="mobile-nav">
+            <ul>
+              <li><HashLink smooth to="/#top" onClick={closeMobileMenu}>{t('nav.home')}</HashLink></li>
+              <li><HashLink smooth to="/#about" onClick={closeMobileMenu}>{t('nav.about')}</HashLink></li>
+              <li><HashLink smooth to="/#projects" onClick={closeMobileMenu}>{t('nav.projects')}</HashLink></li>
+              <li><HashLink smooth to="/#contact" onClick={closeMobileMenu}>{t('nav.contact')}</HashLink></li>
+            </ul>
+          </nav>
+        </div>
       </header>
       
       <Routes>

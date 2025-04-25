@@ -54,17 +54,26 @@ p, span, a:not(.logo a), li, button, input, textarea, label, div {
   flex-direction: column;
 }
 
-/* Header Styles */
+/* Header Styles - Updated for iPhone compatibility */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px;
-  background-color: rgba(0, 0, 0, 0.8) !important; /* Slightly more opaque for header/footer */
+  padding: 5px 20px; /* Increased horizontal padding */
+  background-color: rgba(0, 0, 0, 0.8) !important;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
   z-index: 1000;
+  /* Add safe area insets support for iOS devices */
+  padding-left: max(20px, env(safe-area-inset-left));
+  padding-right: max(20px, env(safe-area-inset-right));
+  padding-top: max(5px, env(safe-area-inset-top));
+}
+
+/* Updated logo styles with more breathing room */
+.logo {
+  padding: 10px 0;
 }
 
 /* Updated style for logo link */
@@ -810,5 +819,97 @@ p, h1, h2, h3, h4, h5, h6 {
 @media (max-width: 576px) {
   .projects-container {
     grid-template-columns: 1fr; /* Single column on very small screens */
+  }
+}
+
+/* Burger Menu Styles */
+.burger-menu-button {
+  display: none; /* Hidden by default, shown on mobile */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  cursor: pointer;
+  z-index: 1002;
+  position: relative;
+  margin-right: 5px; /* Add a little extra margin on the right */
+}
+
+.burger-bar {
+  width: 100%;
+  height: 3px;
+  background-color: #ffffff;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+/* Burger Animation */
+.burger-bar.open:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.burger-bar.open:nth-child(2) {
+  opacity: 0;
+}
+
+.burger-bar.open:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Mobile Navigation Overlay */
+.mobile-nav-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.95);
+  z-index: 1001;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.mobile-nav-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.mobile-nav ul li {
+  margin: 1.5rem 0;
+}
+
+.mobile-nav ul li a {
+  font-size: 1.5rem;
+  color: #ffffff;
+  text-decoration: none;
+  display: block;
+  padding: 0.8rem 1rem;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.mobile-nav ul li a:hover {
+  color: #f36c18;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none; /* Hide desktop navigation on mobile */
+  }
+  
+  .burger-menu-button {
+    display: flex; /* Show burger menu on mobile */
   }
 }
