@@ -913,3 +913,27 @@ p, h1, h2, h3, h4, h5, h6 {
     display: flex; /* Show burger menu on mobile */
   }
 }
+
+/* Shape Divider Mobile Adjustments */
+@media (max-width: 767px) {
+  /* Top divider adjustments */
+  .custom-shape-divider-bottom-1743750583 {
+    top: -100px; /* Reduce from -163px to bring it closer to content */
+    transform: rotate(180deg) scaleY(0.7); /* Scale down vertically to reduce gap */
+  }
+  
+  /* Bottom divider adjustments */
+  .custom-shape-divider-top-1743757542 {
+    bottom: -100px; /* Reduce from -163px to bring it closer to content */
+    padding-top: 60px; /* Reduce padding-top from 100px */
+    transform: scaleY(0.7); /* Scale down vertically to reduce gap */
+  }
+  
+  /* Adjust section spacing for mobile */
+  .about-container1 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
