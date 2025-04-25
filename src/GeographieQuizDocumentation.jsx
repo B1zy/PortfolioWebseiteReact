@@ -1,65 +1,70 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 function GeographieQuizDocumentation() {
+  const { t } = useTranslation();
+  
   return (
     <div className="documentation">
-      <h2>Geographie-Quiz als interaktive WinForms-Applikation</h2>
+      <h2>{t('documentation.geographieQuiz.title')}</h2>
 
       <section>
-        <h3>Aufgabenstellung</h3>
+        <h3>{t('documentation.geographieQuiz.task.title')}</h3>
         <p>
-          Im Rahmen des Lernateliers haben wir uns entschieden, eine Windows-Forms-Applikation in C# zu entwickeln. 
-          Das Ziel war es, ein Geographie-Quiz zu erstellen, das die Kenntnisse über Hauptstädte testet.
+          {t('documentation.geographieQuiz.task.content')}
         </p>
         <ul>
-          <li>Am Schluss dieses Lern- und Arbeitsauftrages sollen Sie ein fertiges Produkt mit Projektdokumentation erstellt haben.</li>
+          {t('documentation.geographieQuiz.task.items', { returnObjects: true }).map((item, index) => (
+            <li key={index}>{item}</li>
+          ))}
         </ul>
       </section>
 
       <section>
-        <h3>Ziele</h3>
-        <p>Meine persönlichen Ziele waren:</p>
+        <h3>{t('documentation.geographieQuiz.goals.title')}</h3>
+        <p>{t('documentation.geographieQuiz.goals.content')}</p>
         <ul>
-          <li>Realisierung eines interaktiven Programms unter Verwendung von WinForms und dessen Steuerelementen.</li>
-          <li>Anwendung von objektorientierten Prinzipien für eine strukturierte und wartbare Codebasis.</li>
+          {t('documentation.geographieQuiz.goals.items', { returnObjects: true }).map((item, index) => (
+            <li key={index}>{item}</li>
+          ))}
         </ul>
       </section>
 
       <section>
-        <h3>Produkt</h3>
+        <h3>{t('documentation.geographieQuiz.product.title')}</h3>
         <p>
-          Das Endergebnis ist eine C#-WinForms-Applikation, die Benutzer durch verschiedene Quizmodule führt. 
-          Jedes Modul stellt Fragen zu einem anderen geographischen Thema.
+          {t('documentation.geographieQuiz.product.content')}
         </p>
-        <p>Ein vorbereitender Schritt war das Erstellen eines Programmablaufplans:</p>
+        <p>{t('documentation.geographieQuiz.product.flowchart')}</p>
         <img src="/PortfolioWebseiteReact/images/geoquiz-flowchart.png" alt="Geographie Quiz Flowchart" />
-        <p>Der Quellcode des Projekts befindet sich im <a href="https://github.com/B1zy/LA1301-Jahr-2/tree/main" target="_blank" rel="noopener noreferrer">GitHub-Repo</a>.</p>
+        <p>
+          <a href="https://github.com/B1zy/LA1301-Jahr-2/tree/main" target="_blank" rel="noopener noreferrer">
+            {t('documentation.geographieQuiz.product.repo')}
+          </a>
+        </p>
       </section>
 
       <section>
-        <h3>Demonstration</h3>
+        <h3>{t('documentation.geographieQuiz.demonstration.title')}</h3>
         <p>
-          Hier sieht man, dass ich auf die falsche Antwort geklickt habe und das Programm hat dies erkannt und mir mitgeteilt, dass ich die falsche Antwort gewählt habe.
+          {t('documentation.geographieQuiz.demonstration.content')}
           <img src= "/PortfolioWebseiteReact/images/111429-209092384-5d58bdca-0a9b-417f-97a6-1b3311c6ef0b.png" alt="Geographie Quiz Wrong Answer" />
         </p>
       </section>
 
       <section>
-        <h3>Reflexion und Auswertung</h3>
+        <h3>{t('documentation.geographieQuiz.reflection.title')}</h3>
         <p>
-          Die grösste Herausforderung war die Aufteilung der Aufgaben und die Koordination im Team. 
-          Wir mussten lernen, unsere Kommunikation zu verbessern, um Missverständnisse zu vermeiden. 
-          Die Konzeption der User Stories und Testfälle half uns, die Anforderungen klar zu definieren und einen strukturierten Entwicklungsprozess zu etablieren.
+          {t('documentation.geographieQuiz.reflection.content1')}
         </p>
         <p>
-          Das Feedback unserer Mitschüler war wertvoll, um die Benutzerfreundlichkeit und das Design der Quizoberfläche zu verbessern.
+          {t('documentation.geographieQuiz.reflection.content2')}
         </p>
         <p>
-          Die Integration verschiedener Quizmodule in eine Anwendung und die Implementierung von Benutzerinteraktionen zeigt, dass wir dieses Ziel erreicht haben.
+          {t('documentation.geographieQuiz.reflection.content3')}
         </p>
         <p>
-          Insgesamt war das Projekt eine lehrreiche Erfahrung in der Softwareentwicklung, von der Planung bis zur Ausführung. 
-          Es hat unser Verständnis für die Entwicklung von interaktiven Anwendungen deutlich erweitert.
+          {t('documentation.geographieQuiz.reflection.content4')}
         </p>
       </section>
     </div>

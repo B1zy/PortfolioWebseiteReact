@@ -1,0 +1,281 @@
+{
+    "nav": {
+      "logo":"Moje Portfolio",
+      "home": "Start",
+      "about": "O mnie",
+      "projects": "Projekty",
+      "contact": "Kontakt"
+    },
+   "intro": {
+      "hello": "Cześć, jestem",
+      "description1": "Jako uczeń IMS'u mam praktyczne doświadczenie w tworzeniu stron internetowych przy użyciu Reacta, HTML, CSS i JavaScriptu. Skupiam się na tworzeniu przejrzystych i intuicyjnych interfejsów, a w projektach szkolnych pracowałem zarówno z bazami danych MS SQL, jak i NoSQL.",
+      "description2": ""
+    },
+    "about": {
+      "title": "O mnie",
+      "bio": "Interesuję się technologią i lubię rozwiązywać trudne zadania. Moja przygoda z programowaniem zaczęła się od robienia prostych gier w GameMakerze i Scratchu – to była świetna zabawa i początek mojego zamiłowania do tworzenia.",
+      "hobby": "Poza szkołą gram w gry, testuję nowe technologie i regularnie chodzę na siłkę.",
+      "skills": "Moje umiejętności",
+      "traits": {
+        "title": "Moje cechy",
+        "problemSolver": {
+          "title": "Rozwiązujący problemy",
+          "description": "Lubię rozwiązywać złożone problemy i znajdować eleganckie rozwiązania."
+        },
+        "fastLearner": {
+          "title": "Szybko się uczący",
+          "description": "Szybko adoptuję się do nowych technologii i środowisk."
+        },
+        "teamPlayer": {
+          "title": "Gracz zespołowy",
+          "description": "Efektywnie współpracuję i jasno komunikuję się z członkami zespołu."
+        },
+        "detailOriented": {
+          "title": "Zorientowany na szczegóły",
+          "description": "Zwracam szczególną uwagę na detale, aby zapewnić wysoką jakość rezultatów."
+        }
+      }
+    },
+    "projects": {
+      "title": "Projekty",
+      "subtitle": "Zobacz, nad czym ostatnio pracowałem",
+      "documentation": "Dokumentacja",
+      "github": "GitHub",
+      "geographieQuiz": {
+        "name": "Quiz Geograficzny",
+        "description": "Interaktywna aplikacja quizowa z geografii stworzona za pomocą WinForms."
+      },
+      "memeGenerator": {
+        "name": "Generator Memów",
+        "description": "Aplikacja internetowa umożliwiająca użytkownikom tworzenie własnych memów z różnymi szablonami."
+      },
+      "mittagessenplaner": {
+        "name": "Planer Obiadów",
+        "description": "Aplikacja do planowania obiadów, która pomaga organizować posiłki na cały tydzień."
+      },
+      "verschlusselungswebseite": {
+        "name": "Strona Szyfrująca",
+        "description": "Strona do szyfrowania i deszyfrowania wiadomości przy użyciu różnych algorytmów."
+      }
+    },
+    
+    "contact": {
+      "title": "Skontaktuj się",
+      "subtitle": "Napisz do mnie",
+      "name": "Imię",
+      "email": "E-mail",
+      "message": "Wiadomość",
+      "send": "Wyślij"
+    },
+    "footer": {
+      "copyright": "© 2025 Kamil Bielski.",
+      "language": "Język"
+    },
+    "documentation": {
+      "verschluesselung": {
+        "title": "Strona Szyfrująca",
+        "task": {
+          "title": "Zadanie",
+          "content": "Zadanie polegało na stworzeniu aplikacji, która pozwala na wybór i zastosowanie różnych metod szyfrowania, umożliwiając wymianę zaszyfrowanych wiadomości, a ewentualnie także obrazów. Nasza grupa (Kamil, Shaheer) zdecydowała się stworzyć stronę internetową zamiast aplikacji."
+        },
+        "goals": {
+          "title": "Cele",
+          "items": [
+            "Możliwość szyfrowania słów",
+            "Możliwość deszyfrowania słów za pomocą klucza"
+          ]
+        },
+        "product": {
+          "title": "Produkt",
+          "content": "Stworzyliśmy stronę internetową, która może szyfrować i deszyfrować słowa, a nawet całe zdania. Najpierw wprowadza się słowo lub zdanie i naciska „Encode\". Następnie wyświetlane jest zaszyfrowane słowo i jednocześnie otrzymuje się klucz, którego można użyć do deszyfrowania wiadomości.",
+          "method": {
+            "title": "Metoda szyfrowania",
+            "content": "Jako metodę szyfrowania wybraliśmy szyfr Cezara. Działa on poprzez przesunięcie liter w alfabecie o ustaloną liczbę pozycji. Kluczem jest liczba pozycji, o którą nastąpiło przesunięcie. Wybraliśmy tę metodę, ponieważ była łatwa w implementacji i uczyliśmy się o niej w Module 114."
+          },
+          "technologies": {
+            "title": "Technologie",
+            "items": ["HTML", "CSS", "JavaScript"]
+          },
+          "codeExample": "Przykład kodu",
+          "examples": "Przykłady:",
+          "encryptedMessage": "Zaszyfrowana wiadomość z poprawnym kluczem:"
+        },
+        "video": "Demonstracja wideo",
+        "reflection": {
+          "title": "Refleksja / Ocena",
+          "reflection": {
+            "title": "Refleksja",
+            "content": "Projekt przebiegał generalnie pozytywnie, ponieważ intensywnie badaliśmy różne metody szyfrowania. Napotkaliśmy jednak wyzwania związane z koordynacją zespołu, co doprowadziło do nieefektywnego wykorzystania czasu. Mimo to decyzja o wyborze metody szyfrowania była pozytywna."
+          },
+          "difficulties": {
+            "title": "Trudności",
+            "content": "Jedną z przeszkód było nasze poranne zmęczenie, które wpływało na naszą produktywność. W przypadku przyszłych projektów ważne jest, aby wcześnie znaleźć rozwiązania tego problemu. Powinniśmy również poprawić naszą pracę zespołową i zapewnić jaśniejszy podział zadań, aby uniknąć strat czasowych."
+          },
+          "conclusion": {
+            "title": "Wniosek",
+            "content": "Mimo trudności udało nam się osiągnąć nasze cele, choć nie tak efektywnie, jak mieliśmy nadzieję. To pokazuje, że lepsza koordynacja zespołu i organizacja są kluczowe dla sukcesu."
+          }
+        }
+      },
+      "mittagessenplaner": {
+        "title": "Planer Obiadów: Aplikacja internetowa do zarządzania i planowania obiadów",
+        "summary": {
+          "title": "Podsumowanie",
+          "content": "Planer Obiadów to aplikacja internetowa, która pozwala użytkownikom rejestrować się w różnych miejscach na obiad i zobaczyć, kto jeszcze tam będzie. Ułatwia to użytkownikom znalezienie swoich przyjaciół i wspólne zjedzenie obiadu. Projekt obejmuje implementację rejestracji użytkowników, logowania, wyświetlania miejsc na obiad i funkcjonalności zameldowania przy użyciu MongoDB, Express, Node.js i prostego HTML/CSS/JavaScript dla frontendu."
+        },
+        "task": {
+          "title": "Zadanie / Cele",
+          "content": "Celem było opracowanie aplikacji internetowej, która przechowuje różne miejsca na obiad i pozwala użytkownikom zameldować się w jednym z tych miejsc na określoną datę. Miały być używane technologie takie jak MongoDB, Express, Node.js i JavaScript.",
+          "goals": "Cele:",
+          "items": [
+            "Opracowanie przyjaznej dla użytkownika rejestracji i logowania (Musi)",
+            "Wyświetlanie różnych miejsc na obiad (Musi)",
+            "Implementacja funkcjonalności zameldowania (Musi)",
+            "Przechowywanie danych w bazie danych NoSQL (Musi)",
+            "Wyświetlanie zameldowań użytkowników (Może)"
+          ]
+        },
+        "product": {
+          "title": "Produkt",
+          "content": "Planer Obiadów to aplikacja internetowa, która pozwala użytkownikom rejestrować się, logować, przeglądać różne miejsca na obiad i zameldować się w nich. Aplikacja używa MongoDB do przechowywania danych i Express.js dla backendu. Komponenty frontendu składają się z HTML, CSS i JavaScript.",
+          "technologies": "Użyte technologie:",
+          "items": ["MongoDB", "Express.js", "Node.js", "HTML", "CSS", "JavaScript"],
+          "video": "Oto demonstracja wideo Planera Obiadów:",
+          "screenshot": "Oto zrzut ekranu danych użytkowników MongoDB:",
+          "repo": "Link do repozytorium GitHub"
+        },
+        "reflection": {
+          "title": "Refleksja / Ocena",
+          "progress": {
+            "title": "Przebieg projektu",
+            "content": "Projekt rozpoczął się od podstawowej struktury i implementacji rejestracji i logowania użytkowników. Następnie dodano różne miejsca na obiad i wyświetlono je w interfejsie. Funkcjonalność zameldowania została zaimplementowana jako ostatnia."
+          },
+          "insights": {
+            "title": "Spostrzeżenia i trudności",
+            "content": "Podczas tworzenia pojawiły się problemy z uwierzytelnianiem tokenu, szczególnie dlatego, że podczas procesu rejestracji nie dodano userId do danych użytkownika. Doprowadziło to do częściowego nieprawidłowego działania funkcji zameldowania."
+          },
+          "good": {
+            "title": "Co poszło dobrze?",
+            "content": "Podstawowa struktura i implementacja rejestracji i logowania przebiegły sprawnie. Wyświetlanie miejsc na obiad w interfejsie również działało zgodnie z planem."
+          },
+          "bad": {
+            "title": "Co nie poszło dobrze?",
+            "content": "Uwierzytelnianie tokenu i brakujący userId doprowadziły do problemów w procesie zameldowania."
+          },
+          "measures": {
+            "title": "Konkretne środki dla przyszłych projektów",
+            "items": [
+              "Wczesne i dokładne testowanie procesów uwierzytelniania, aby upewnić się, że wszystkie niezbędne dane są prawidłowo przechowywane.",
+              "Częstsze sprawdzanie i testowanie całej funkcjonalności podczas tworzenia."
+            ]
+          }
+        }
+      },
+      "memeGenerator": {
+        "title": "Generator Memów: Aplikacja internetowa do tworzenia własnych memów",
+        "task": {
+          "title": "Zadanie",
+          "content": "Zadanie polegało na stworzeniu aplikacji internetowej, która umożliwia użytkownikom wybieranie spośród różnych szablonów memów i dodawanie niestandardowego tekstu w celu tworzenia własnych memów. Aplikacja powinna być łatwa w użyciu i oferować responsywny interfejs.",
+          "items": [
+            "Stworzenie internetowego generatora memów, który jest dostępny i przyjazny dla użytkownika",
+            "Umożliwienie użytkownikom wyboru spośród różnych szablonów memów",
+            "Umożliwienie dodawania niestandardowego tekstu do szablonów",
+            "Zapewnienie funkcji pobierania utworzonych memów"
+          ]
+        },
+        "goals": {
+          "title": "Cele",
+          "content": "Projekt miał na celu:",
+          "items": [
+            "Wdrożenie responsywnej aplikacji internetowej przy użyciu nowoczesnego HTML, CSS i JavaScript",
+            "Stworzenie intuicyjnego interfejsu użytkownika, który ułatwia tworzenie memów",
+            "Zastosowanie odpowiednich technik manipulacji obrazem do nakładania tekstu",
+            "Zapewnienie kompatybilności międzyprzeglądarkowej"
+          ]
+        },
+        "product": {
+          "title": "Produkt",
+          "content": "Opracowaliśmy internetowy generator memów, który pozwala użytkownikom wybierać spośród różnych popularnych szablonów memów. Użytkownicy mogą dodawać tekst górny i dolny z konfigurowalnymi opcjami, przeglądać swoje dzieło w czasie rzeczywistym i pobierać gotowy mem do udostępniania w mediach społecznościowych.",
+          "features": {
+            "title": "Główne funkcje",
+            "items": [
+              "Wybór szablonu z wyselekcjonowanej biblioteki",
+              "Dostosowanie tekstu (czcionka, rozmiar, kolor)",
+              "Podgląd w czasie rzeczywistym",
+              "Pobieranie stworzonego memu jednym kliknięciem",
+              "Responsywny design dla urządzeń mobilnych"
+            ]
+          },
+          "technologies": {
+            "title": "Użyte technologie",
+            "items": ["HTML5", "CSS3", "JavaScript", "Canvas API"]
+          },
+          "repo": "Link do repozytorium GitHub"
+        },
+        "demonstration": {
+          "title": "Demonstracja",
+          "content": "Poniższy film pokazuje, jak działa generator memów. Użytkownicy mogą wybrać szablon, dodać niestandardowy tekst, dostosować właściwości tekstu i pobrać swoje dzieło."
+        },
+        "reflection": {
+          "title": "Refleksja i ocena",
+          "challenges": {
+            "title": "Wyzwania",
+            "content": "Jednym z głównych wyzwań było zaimplementowanie prawidłowego pozycjonowania tekstu na różnych szablonach memów, ponieważ każdy szablon ma unikalne wymiary i optymalne umieszczenie tekstu. Dodatkowo, zapewnienie dobrego działania aplikacji na urządzeniach mobilnych wymagało starannego zwrócenia uwagi na zasady projektowania responsywnego."
+          },
+          "learnings": {
+            "title": "Wnioski",
+            "content": "Ten projekt zapewnił cenne doświadczenie w pracy z API Canvas do manipulacji obrazem i nakładania tekstu. Poprawiliśmy również nasze umiejętności w tworzeniu intuicyjnych interfejsów użytkownika i obsłudze operacji na plikach w JavaScript."
+          },
+          "improvements": {
+            "title": "Potencjalne ulepszenia",
+            "items": [
+              "Dodanie możliwości przesyłania niestandardowych szablonów",
+              "Zaimplementowanie bardziej zaawansowanych opcji stylizacji tekstu",
+              "Dodanie funkcji udostępniania w mediach społecznościowych",
+              "Wprowadzenie systemu kont użytkowników do zapisywania utworzonych memów"
+            ]
+          },
+          "conclusion": {
+            "title": "Podsumowanie",
+            "content": "Projekt generatora memów z powodzeniem spełnił swoje podstawowe cele. Pokazał naszą zdolność do tworzenia funkcjonalnych, przyjaznych dla użytkownika aplikacji internetowych, które efektywnie łączą technologie front-end. Końcowy produkt jest zarówno praktyczny, jak i rozrywkowy, służąc swojemu celowi, jakim jest umożliwienie użytkownikom łatwego tworzenia niestandardowych memów."
+          }
+        }
+      },
+      "geographieQuiz": {
+        "title": "Quiz Geograficzny jako interaktywna aplikacja WinForms",
+        "task": {
+          "title": "Zadanie",
+          "content": "W ramach warsztatów edukacyjnych zdecydowaliśmy się opracować aplikację Windows Forms w C#. Celem było stworzenie quizu geograficznego, który testuje wiedzę o stolicach.",
+          "items": [
+            "Na koniec tego zadania edukacyjnego i roboczego powinieneś stworzyć gotowy produkt z dokumentacją projektu."
+          ]
+        },
+        "goals": {
+          "title": "Cele",
+          "content": "Moje osobiste cele to:",
+          "items": [
+            "Realizacja interaktywnego programu przy użyciu WinForms i jego kontrolek.",
+            "Zastosowanie zasad obiektowych dla ustrukturyzowanej i łatwej w utrzymaniu bazy kodu."
+          ]
+        },
+        "product": {
+          "title": "Produkt",
+          "content": "Końcowym rezultatem jest aplikacja C# WinForms, która prowadzi użytkowników przez różne moduły quizu. Każdy moduł zadaje pytania na inny temat geograficzny.",
+          "flowchart": "Krokiem przygotowawczym było utworzenie schematu przepływu programu:",
+          "repo": "Kod źródłowy projektu znajduje się w repozytorium GitHub."
+        },
+        "demonstration": {
+          "title": "Demonstracja",
+          "content": "Tutaj widać, że kliknąłem błędną odpowiedź, a program rozpoznał to i poinformował mnie, że wybrałem złą odpowiedź."
+        },
+        "reflection": {
+          "title": "Refleksja i ocena",
+          "content1": "Największym wyzwaniem był podział zadań i koordynacja w zespole. Musieliśmy nauczyć się poprawiać naszą komunikację, aby uniknąć nieporozumień. Koncepcja historii użytkownika i przypadków testowych pomogła nam jasno zdefiniować wymagania i ustanowić ustrukturyzowany proces rozwoju.",
+          "content2": "Informacje zwrotne od naszych kolegów z klasy były cenne dla poprawy przyjazności dla użytkownika i projektu interfejsu quizu.",
+          "content3": "Integracja różnych modułów quizu w jednej aplikacji i implementacja interakcji użytkownika pokazuje, że osiągnęliśmy ten cel.",
+          "content4": "Ogólnie rzecz biorąc, projekt był pouczającym doświadczeniem w tworzeniu oprogramowania, od planowania po wykonanie. Znacznie rozszerzył nasze rozumienie tworzenia aplikacji interaktywnych."
+        }
+      }
+    }
+  }
+

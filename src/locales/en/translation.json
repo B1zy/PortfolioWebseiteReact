@@ -1,0 +1,280 @@
+{
+  "nav": {
+    "logo":"My Portfolio",
+    "home": "Home",
+    "about": "About Me",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "intro": {
+    "hello": "Hello, I'm",
+    "description1": "As an IMS student, I’ve gained practical experience in web development using React, HTML, CSS, and JavaScript. I focus on creating user-friendly interfaces and have worked with both MS SQL and NoSQL databases in various school projects.",
+    "description2": ""
+  },
+  "about": {
+    "title": "About Me",
+    "bio": "I'm an IMS student with a growing interest in tech and problem-solving. My programming journey began with creating simple games in GameMaker and Scratch, driven by curiosity and a passion for building things.",
+    "hobby": "Outside of school, I enjoy gaming, exploring new tools, and getting a workout in at the gym.",
+    "skills": "My Skills",
+    "traits": {
+      "title": "My Traits",
+      "problemSolver": {
+        "title": "Problem Solver",
+        "description": "I enjoy tackling complex problems and finding elegant solutions."
+      },
+      "fastLearner": {
+        "title": "Fast Learner",
+        "description": "I quickly adapt to new technologies and environments."
+      },
+      "teamPlayer": {
+        "title": "Team Player",
+        "description": "I work effectively with others and communicate clearly with team members."
+      },
+      "detailOriented": {
+        "title": "Detail Oriented",
+        "description": "I pay close attention to details to ensure high-quality results."
+      }
+    }
+
+  },
+  "projects": {
+    "title": "My Projects",
+    "subtitle": "Check out some of my recent work",
+    "documentation": "Documentation",
+    "github": "GitHub",
+    "geographieQuiz": {
+      "name": "Geography Quiz",
+      "description": "An interactive geography quiz application built with WinForms."
+    },
+    "memeGenerator": {
+      "name": "Meme Generator",
+      "description": "A web application that lets users create custom memes with various templates."
+    },
+    "mittagessenplaner": {
+      "name": "Lunch Planner",
+      "description": "A lunch planning application to help organize meals for the week."
+    },
+    "verschlusselungswebseite": {
+      "name": "Encryption Website",
+      "description": "A website for encrypting and decrypting messages using various algorithms."
+    }
+  },
+  "contact": {
+    "title": "Contact Me",
+    "subtitle": "Get in touch",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send Message"
+  },
+  "footer": {
+    "copyright": "© 2025 Kamil Bielski. All rights reserved.",
+    "language": "Language"
+  },
+  "documentation": {
+    "verschluesselung": {
+      "title": "Encryption Website",
+      "task": {
+        "title": "Task",
+        "content": "The task was to create an application that allows various encryption methods to be selected and applied, enabling encrypted messages and possibly images to be exchanged. Our group (Kamil, Shaheer) decided to create a website instead of an app."
+      },
+      "goals": {
+        "title": "Goals",
+        "items": [
+          "Ability to encrypt words",
+          "Ability to decrypt words with a key"
+        ]
+      },
+      "product": {
+        "title": "Product",
+        "content": "We created a website that can encrypt and decrypt words or even sentences. First, you enter the word or sentence and press \"Encode\". Then, the encrypted word is displayed, and you simultaneously receive a key that can be used to decrypt the message.",
+        "method": {
+          "title": "Encryption Method",
+          "content": "For the encryption method, we chose Caesar encryption. This works by shifting letters in the alphabet by a fixed number of positions. The key is the number of positions shifted. We chose this method because it was simple to implement and we learned about it in Module 114."
+        },
+        "technologies": {
+          "title": "Technologies",
+          "items": ["HTML", "CSS", "JavaScript"]
+        },
+        "codeExample": "Code Example",
+        "examples": "Examples:",
+        "encryptedMessage": "Encrypted message with correct key:"
+      },
+      "video": "Video Demonstration",
+      "reflection": {
+        "title": "Reflection / Evaluation",
+        "reflection": {
+          "title": "Reflection",
+          "content": "The project was generally positive as we intensively explored various encryption methods. However, we encountered challenges with team coordination, which led to inefficient use of time. Nevertheless, the decision for an encryption method was positive."
+        },
+        "difficulties": {
+          "title": "Difficulties",
+          "content": "One obstacle was our morning fatigue, which affected our productivity. For future projects, it's important to find early solutions for this problem. We should also improve our teamwork and ensure clearer task distribution to avoid time losses."
+        },
+        "conclusion": {
+          "title": "Conclusion",
+          "content": "Despite the difficulties, we were able to achieve our goals, albeit not as efficiently as hoped. This shows that improved team coordination and organization are crucial for success."
+        }
+      }
+    },
+    "mittagessenplaner": {
+      "title": "Lunch Planner: Web Application for Managing and Planning Lunches",
+      "summary": {
+        "title": "Summary",
+        "content": "The Lunch Planner is a web application that allows users to register for various lunch locations and see who else will be there. This makes it easier for users to find their friends and have lunch together. The project includes the implementation of user registration, login, display of lunch locations, and check-in functionality using MongoDB, Express, Node.js, and simple HTML/CSS/JavaScript for the frontend."
+      },
+      "task": {
+        "title": "Task / Goals",
+        "content": "The goal was to develop a web application that stores various lunch locations and allows users to check in at one of these locations for a specific date. Technologies such as MongoDB, Express, Node.js, and JavaScript were to be used.",
+        "goals": "Goals:",
+        "items": [
+          "Development of a user-friendly registration and login (Must)",
+          "Display of various lunch locations (Must)",
+          "Implementation of check-in functionality (Must)",
+          "Storage of data in a NoSQL database (Must)",
+          "Display of user check-ins (Can)"
+        ]
+      },
+      "product": {
+        "title": "Product",
+        "content": "The Lunch Planner is a web application that allows users to register, log in, view various lunch locations, and check in to them. The application uses MongoDB for data storage and Express.js for the backend. The frontend components consist of HTML, CSS, and JavaScript.",
+        "technologies": "Used Technologies:",
+        "items": ["MongoDB", "Express.js", "Node.js", "HTML", "CSS", "JavaScript"],
+        "video": "Here is a video demonstration of the Lunch Planner:",
+        "screenshot": "Here is a screenshot of the MongoDB user data:",
+        "repo": "Link to GitHub Repo"
+      },
+      "reflection": {
+        "title": "Reflection / Evaluation",
+        "progress": {
+          "title": "Project Progress",
+          "content": "The project began with the basic structure and implementation of user registration and login. Then, the various lunch locations were added and displayed in the frontend. The check-in functionality was implemented last."
+        },
+        "insights": {
+          "title": "Insights and Difficulties",
+          "content": "During development, problems arose with token authentication, especially because a userId was not added to the user data during the registration process. This led to the check-in functionality partially not working."
+        },
+        "good": {
+          "title": "What went well?",
+          "content": "The basic structure and implementation of registration and login went smoothly. The display of lunch locations in the frontend also worked as planned."
+        },
+        "bad": {
+          "title": "What didn't go well?",
+          "content": "Token authentication and the missing userId led to problems in the check-in process."
+        },
+        "measures": {
+          "title": "Concrete Measures for Future Projects",
+          "items": [
+            "Early and thorough testing of authentication processes to ensure that all necessary data is stored correctly.",
+            "More frequent checks and tests of the entire functionality during development."
+          ]
+        }
+      }
+    },
+    "geographieQuiz": {
+      "title": "Geography Quiz as Interactive WinForms Application",
+      "task": {
+        "title": "Task",
+        "content": "As part of the learning workshop, we decided to develop a Windows Forms application in C#. The goal was to create a geography quiz that tests knowledge of capital cities.",
+        "items": [
+          "At the end of this learning and work assignment, you should have created a finished product with project documentation."
+        ]
+      },
+      "goals": {
+        "title": "Goals",
+        "content": "My personal goals were:",
+        "items": [
+          "Implementation of an interactive program using WinForms and its controls.",
+          "Application of object-oriented principles for a structured and maintainable code base."
+        ]
+      },
+      "product": {
+        "title": "Product",
+        "content": "The end result is a C# WinForms application that guides users through various quiz modules. Each module asks questions about a different geographical topic.",
+        "flowchart": "A preparatory step was creating a program flow chart:",
+        "repo": "The source code of the project can be found in the GitHub repo."
+      },
+      "demonstration": {
+        "title": "Demonstration",
+        "content": "Here you can see that I clicked on the wrong answer and the program recognized this and informed me that I chose the wrong answer."
+      },
+      "reflection": {
+        "title": "Reflection and Evaluation",
+        "content1": "The biggest challenge was dividing tasks and coordinating in the team. We had to learn to improve our communication to avoid misunderstandings. The design of the user stories and test cases helped us to clearly define the requirements and establish a structured development process.",
+        "content2": "The feedback from our classmates was valuable for improving the user-friendliness and design of the quiz interface.",
+        "content3": "The integration of different quiz modules into one application and the implementation of user interactions shows that we have achieved this goal.",
+        "content4": "Overall, the project was an educational experience in software development, from planning to execution. It has significantly expanded our understanding of developing interactive applications."
+      }
+    },
+    "memeGenerator": {
+      "title": "Meme Generator: Web Application for Creating Custom Memes",
+      "task": {
+        "title": "Task",
+        "content": "The task was to create a web application that allows users to select from different meme templates and add custom text to create their own memes. The application should be easy to use and provide a responsive interface.",
+        "items": [
+          "Create a web-based meme generator that is accessible and user-friendly",
+          "Allow users to select from a variety of meme templates",
+          "Enable the addition of customized text to the templates",
+          "Provide download functionality for the created memes"
+        ]
+      },
+      "goals": {
+        "title": "Goals",
+        "content": "The project aimed to:",
+        "items": [
+          "Implement a responsive web application using modern HTML, CSS, and JavaScript",
+          "Create an intuitive user interface that makes meme creation simple",
+          "Apply proper image manipulation techniques for text overlay",
+          "Ensure cross-browser compatibility"
+        ]
+      },
+      "product": {
+        "title": "Product",
+        "content": "We developed a web-based meme generator that allows users to select from a range of popular meme templates. Users can add top and bottom text with customizable options, preview their creation in real-time, and download the finished meme for sharing on social media.",
+        "features": {
+          "title": "Key Features",
+          "items": [
+            "Template selection from a curated library",
+            "Text customization (font, size, color)",
+            "Real-time preview",
+            "One-click download of the created meme",
+            "Mobile-responsive design"
+          ]
+        },
+        "technologies": {
+          "title": "Technologies Used",
+          "items": ["HTML5", "CSS3", "JavaScript", "Canvas API"]
+        },
+        "repo": "Link to GitHub Repository"
+      },
+      "demonstration": {
+        "title": "Demonstration",
+        "content": "The video below shows how the meme generator works. Users can select a template, add custom text, adjust text properties, and download their creation."
+      },
+      "reflection": {
+        "title": "Reflection and Evaluation",
+        "challenges": {
+          "title": "Challenges",
+          "content": "One of the main challenges was implementing proper text positioning on different meme templates, as each template has unique dimensions and optimal text placements. Additionally, ensuring the application worked well on mobile devices required careful attention to responsive design principles."
+        },
+        "learnings": {
+          "title": "Learnings",
+          "content": "This project provided valuable experience in working with the Canvas API for image manipulation and text overlay. We also improved our skills in creating intuitive user interfaces and handling file operations in JavaScript."
+        },
+        "improvements": {
+          "title": "Potential Improvements",
+          "items": [
+            "Add the ability to upload custom templates",
+            "Implement more advanced text styling options",
+            "Add social media sharing functionality",
+            "Include a user account system to save created memes"
+          ]
+        },
+        "conclusion": {
+          "title": "Conclusion",
+          "content": "The meme generator project was successful in meeting its core objectives. It demonstrated our ability to create functional, user-friendly web applications that combine front-end technologies effectively. The final product is both practical and entertaining, serving its purpose of allowing users to easily create custom memes."
+        }
+      }
+    }
+  }
+}

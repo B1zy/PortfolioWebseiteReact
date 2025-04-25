@@ -1,44 +1,61 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 function ProjectsSection() {
+  const { t } = useTranslation();
   const [hoveredProject, setHoveredProject] = useState(null);
 
   const projects = [
     {
-      name: "Geographie-Quiz als interaktive WinForms-Applikation",
+      id: "geographieQuiz",
       image: "/images/111429-209092384-5d58bdca-0a9b-417f-97a6-1b3311c6ef0b.png",
       github: "https://github.com/B1zy/LA1301-Jahr-2/tree/main",
       documentation: "/geographie-quiz",
-      description: "An interactive geography quiz application built with WinForms."
+      technologies: [
+        { icon: "devicon-csharp-plain colored" }
+      ]
     },
     {
-      name: "Meme-Generator",
+      id: "memeGenerator",
       video: "/videos/116434-2024-01-06 16-06-33.mp4",
       github: "https://github.com/B1zy/La1302-Jahr-2/blob/main/Projektdokumentation.md",
       documentation: "/meme-generator",
-      description: "A web application that lets users create custom memes with various templates."
+      technologies: [
+        { icon: "devicon-html5-plain colored" },
+        { icon: "devicon-css3-plain colored" },
+        { icon: "devicon-javascript-plain colored" }
+      ]
     },
     {
-      name: "Mittagessenplaner",
+      id: "mittagessenplaner",
       video: "/videos/2024-06-16 21-11-36.mp4",
       github: "https://github.com/B1zy/LA1305-Jahr-2",
       documentation: "/mittagessenplaner",
-      description: "A lunch planning application to help organize meals for the week."
+      technologies: [
+        { icon: "devicon-html5-plain colored" },
+        { icon: "devicon-css3-plain colored" },
+        { icon: "devicon-javascript-plain colored" },
+        { icon: "devicon-mongodb-plain colored" }
+      ]
     },
     {
-      name: "Verschlüsselungswebseite",
+      id: "verschlusselungswebseite",
       video: "/videos/2024-03-13 11-26-51.mp4",
       github: "https://github.com/B1zy/La1303-Jahr-2",
       documentation: "/verschlusselungswebseite",
-      description: "A website for encrypting and decrypting messages using various algorithms."
+      technologies: [
+        { icon: "devicon-html5-plain colored" },
+        { icon: "devicon-css3-plain colored" },
+        { icon: "devicon-javascript-plain colored" }
+      ]
     }
   ];
 
   return (
     <div className="section-container">
-      <h2 className="section-title">My Projects</h2>
-      <p className="section-subtitle">Check out some of my recent work</p>
+      <h2 className="section-title">{t('projects.title')}</h2>
+      <p className="section-subtitle">{t('projects.subtitle')}</p>
       
       <div className="projects-container">
         {projects.map((project, index) => (
@@ -49,13 +66,21 @@ function ProjectsSection() {
             onMouseLeave={() => setHoveredProject(null)}
           >
             <div className="project-content">
-              <h2>{project.name}</h2>
-              <p className="project-description">{project.description}</p>
+              <h2>{t(`projects.${project.id}.name`)}</h2>
+              <p className="project-description">{t(`projects.${project.id}.description`)}</p>
+              
+              <div className="project-tech-stack">
+                {project.technologies.map((tech, techIndex) => (
+                  <div key={techIndex} className="tech-icon" title={tech.name}>
+                    <i className={tech.icon}></i>
+                  </div>
+                ))}
+              </div>
             </div>
             
             <div className="project-links">
-              <Link to={project.documentation} className="doc-link">Documentation</Link>
-              <a href={project.github} target="_blank" rel="noopener noreferrer" className="github-link">GitHub</a>
+              <Link to={project.documentation} className="doc-link">{t('projects.documentation')}</Link>
+              <a href={project.github} target="_blank" rel="noopener noreferrer" className="github-link">{t('projects.github')}</a>
             </div>
             
             {/* Show video or image preview on hover */}
@@ -72,7 +97,7 @@ function ProjectsSection() {
                 ) : (
                   <img
                     src={`/PortfolioWebseiteReact${project.image}`}
-                    alt={`${project.name} preview`}
+                    alt={`${t(`projects.${project.id}.name`)} preview`}
                     className="project-image-preview"
                   />
                 )}

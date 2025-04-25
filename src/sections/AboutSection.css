@@ -27,8 +27,9 @@
 
 /* Bio section styles */
 .bio h3 {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   font-size: 1.8rem;
+  color: #f36c18;
 }
 
 .bio p {
@@ -146,6 +147,148 @@
   line-height: 1.5;
   font-size: 0.9rem;
 }
+  
+/* Compact traits section */
+.traits-section h3 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  color: #f36c18;
+}
+
+.traits-grid.compact {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.trait-card.compact {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.trait-card.compact:hover {
+  transform: translateY(-5px);
+}
+
+.trait-card.compact h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.trait-card.compact p {
+  line-height: 1.4;
+  font-size: 0.85rem;
+}
+
+/* Three-column layout */
+.three-column-layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+/* Profile section styles */
+.profile-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-image-container {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #f36c18;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  width: 100%;
+}
+
+.profile-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.7rem 1rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.profile-link i {
+  margin-right: 8px;
+}
+
+.resume-link {
+  background-color: #f36c18;
+}
+
+.linkedin-link {
+  background-color: #0077B5;
+}
+
+.github-link {
+  background-color: #333;
+}
+
+/* Compact skills section */
+.compact-skills-section h3 {
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  color: #f36c18;
+  text-align: center;
+}
+
+.skills-rows {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  justify-content: center;
+}
+
+.skill-bubble {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.skill-bubble:hover {
+  transform: scale(1.2);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.skill-bubble i {
+  font-size: 1.8rem;
+}
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
@@ -159,5 +302,22 @@
   
   .skill-icon {
     width: 80px;
+  }
+}
+
+@media (max-width: 992px) {
+  .three-column-layout {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .profile-section {
+    margin: 0 auto;
+    max-width: 300px;
+  }
+  
+  .skill-bubble {
+    width: 45px;
+    height: 45px;
   }
 }

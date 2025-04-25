@@ -1,7 +1,10 @@
 import React from 'react';
-import { motion } from 'framer-motion'; // Optional for animations
+import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 function IntroSection() {
+  const { t } = useTranslation();
+  
   return (
     <motion.div 
       className="intro-container"
@@ -9,14 +12,12 @@ function IntroSection() {
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
-      <h1>Hello, I'm <span className="highlight">Kamil Bielski</span></h1>
+      <h1>{t('intro.hello')} <span className="highlight">Kamil Bielski</span></h1>
       
       <div className="intro-content">
-        <p>I create responsive and user-friendly web applications with modern technologies.</p>
-        <p>Based in Switzerland, I'm passionate about building solutions that make a difference.</p>
+        <p>{t('intro.description1')}</p>
+        <p>{t('intro.description2')}</p>
       </div>
-      
-      
     </motion.div>
   );
 }

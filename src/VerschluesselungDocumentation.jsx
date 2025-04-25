@@ -1,49 +1,46 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 function VerschluesselungDocumentation() {
+  const { t } = useTranslation();
+  
   return (
     <div className="documentation">
-      <h2>Verschlüsselungswebseite</h2>
+      <h2>{t('documentation.verschluesselung.title')}</h2>
 
       <section>
-        <h3>Aufgabenstellung</h3>
-        <p>
-          Die Aufgabe bestand darin, eine Applikation zu erstellen, mit der verschiedene Verschlüsselungsverfahren ausgewählt und angewendet werden können, 
-          sodass man untereinander verschlüsselte Nachrichten und eventuell Bilder austauschen kann. 
-          Unsere Gruppe (Kamil, Shaheer) hat sich entschieden, anstatt einer App eine Webseite zu erstellen.
-        </p>
+        <h3>{t('documentation.verschluesselung.task.title')}</h3>
+        <p>{t('documentation.verschluesselung.task.content')}</p>
       </section>
 
       <section>
-        <h3>Ziele</h3>
+        <h3>{t('documentation.verschluesselung.goals.title')}</h3>
         <ul>
-          <li>Wörter verschlüsseln können</li>
-          <li>Wörter mit einem Key entschlüsseln können</li>
+          {t('documentation.verschluesselung.goals.items', { returnObjects: true }).map((item, index) => (
+            <li key={index}>{item}</li>
+          ))}
         </ul>
       </section>
 
       <section>
-        <h3>Produkt</h3>
+        <h3>{t('documentation.verschluesselung.product.title')}</h3>
         <p>
-          Wir haben eine Webseite erstellt, mit der man Wörter oder sogar Sätze verschlüsseln und entschlüsseln kann. 
-          Zuerst gibt man das Wort bzw. den Satz ein und drückt auf "Encode". Danach wird das verschlüsselte Wort angezeigt und man erhält gleichzeitig einen Schlüssel, 
-          mit dem die Nachricht entschlüsselt werden kann.
+          {t('documentation.verschluesselung.product.content')}
         </p>
 
-        <h4>Verschlüsselungsverfahren</h4>
+        <h4>{t('documentation.verschluesselung.product.method.title')}</h4>
         <p>
-          Für das Verschlüsselungsverfahren haben wir uns für die Caesar-Verschlüsselung entschieden. Diese funktioniert, indem Buchstaben im Alphabet um eine festgelegte Anzahl von Stellen verschoben werden. 
-          Der Schlüssel ist die Anzahl der Stellen, um die verschoben wurde. Wir haben uns für diese Methode entschieden, weil sie einfach zu implementieren war und wir darüber in Modul 114 gelernt haben.
+          {t('documentation.verschluesselung.product.method.content')}
         </p>
 
-        <h4>Technologien</h4>
+        <h4>{t('documentation.verschluesselung.product.technologies.title')}</h4>
         <ul>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JavaScript</li>
+          {t('documentation.verschluesselung.product.technologies.items', { returnObjects: true }).map((tech, index) => (
+            <li key={index}>{tech}</li>
+          ))}
         </ul>
 
-        <h4>Codebeispiel</h4>
+        <h4>{t('documentation.verschluesselung.product.codeExample')}</h4>
         <pre>
           <code>
             {`function encode() {
@@ -70,11 +67,11 @@ function VerschluesselungDocumentation() {
         </pre>
 
 
-        <h4>Beispiele:</h4>
-        <p>Verschlüsselte Nachricht mit richtigen Schlüssel:</p>
+        <h4>{t('documentation.verschluesselung.product.examples')}</h4>
+        <p>{t('documentation.verschluesselung.product.encryptedMessage')}</p>
         <img src="/PortfolioWebseiteReact/images/119301-Screenshot 2024-03-15 105549.png" alt="Falscher Schlüssel" style={{ maxWidth: '100%', borderRadius: '10px', marginTop: '20px' }} />
 
-        <h4>Videodemonstration</h4>
+        <h4>{t('documentation.verschluesselung.video')}</h4>
         <video controls style={{ maxWidth: '100%', borderRadius: '10px' }}>
           <source src="/PortfolioWebseiteReact/videos/2024-03-13 11-26-51.mp4" type="video/mp4" />
           Your browser does not support the video tag.
@@ -82,24 +79,20 @@ function VerschluesselungDocumentation() {
       </section>
 
       <section>
-        <h3>Reflexion / Auswertung</h3>
-        <h4>Reflexion</h4>
+        <h3>{t('documentation.verschluesselung.reflection.title')}</h3>
+        <h4>{t('documentation.verschluesselung.reflection.reflection.title')}</h4>
         <p>
-          Das Projekt verlief grundsätzlich positiv, da wir uns intensiv mit verschiedenen Verschlüsselungsmethoden beschäftigten. 
-          Allerdings stießen wir auf Herausforderungen bei der Teamkoordination, was zu ineffizienter Zeitnutzung führte. 
-          Trotzdem fiel die Entscheidung für eine Verschlüsselungsmethode positiv aus.
+          {t('documentation.verschluesselung.reflection.reflection.content')}
         </p>
 
-        <h4>Schwierigkeiten</h4>
+        <h4>{t('documentation.verschluesselung.reflection.difficulties.title')}</h4>
         <p>
-          Ein Hindernis war unsere morgendliche Müdigkeit, die unsere Produktivität beeinträchtigte. Für zukünftige Projekte ist es wichtig, frühzeitige Lösungen für dieses Problem zu finden. 
-          Wir sollten auch unsere Teamarbeit verbessern und eine klarere Aufgabenverteilung sicherstellen, um Zeitverluste zu vermeiden.
+          {t('documentation.verschluesselung.reflection.difficulties.content')}
         </p>
 
-        <h4>Fazit</h4>
+        <h4>{t('documentation.verschluesselung.reflection.conclusion.title')}</h4>
         <p>
-          Trotz der Schwierigkeiten waren wir in der Lage, unsere Ziele zu erreichen, wenn auch nicht so effizient wie erhofft. 
-          Dies zeigt, dass eine verbesserte Teamkoordination und Organisation für den Erfolg entscheidend sind.
+          {t('documentation.verschluesselung.reflection.conclusion.content')}
         </p>
       </section>
     </div>

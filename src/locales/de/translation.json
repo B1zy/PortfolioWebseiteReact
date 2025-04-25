@@ -1,0 +1,279 @@
+{
+    "nav": {
+      "logo":"Mein Portfolio",
+      "home": "Start",
+      "about": "Wer ich bin",
+      "projects": "Projekte",
+      "contact": "Kontakt"
+    },
+    "intro": {
+      "hello": "Hi, ich bin",
+      "description1": "als IMS-Student habe ich gelernt, moderne Webapps mit React, HTML, CSS und JavaScript zu bauen. Ich lege Wert auf einfache, übersichtliche Oberflächen und durfte in Schulprojekten mit MS SQL sowie NoSQL-Datenbanken arbeiten.",
+      "description2": ""
+    },
+    "about": {
+      "title": "Wer ich bin",
+      "bio": "Tech fasziniert mich – besonders, wenn's darum geht, knifflige Probleme zu knacken. Angefangen hab ich mit kleinen Spielen in GameMaker2 und Scratch. Das war geil, aber schon da hab ich gemerkt, wie sehr mich das fassziniert und freude bringt.",
+      "hobby": "Wenn ich nicht in der Schule bin, zocke ich gern, probiere neue Tools aus oder schwing mich ins Fitnessstudio, um mich auszupowern.",
+      "skills": "Meine Skills",
+      "traits": {
+        "title": "Meine Eigenschaften",
+        "problemSolver": {
+          "title": "Problemlöser",
+          "description": "Ich löse gerne komplexe Probleme und finde elegante Lösungen."
+        },
+        "fastLearner": {
+          "title": "Schneller Lerner",
+          "description": "Ich passe mich schnell an neue Technologien und Umgebungen an."
+        },
+        "teamPlayer": {
+          "title": "Teamplayer",
+          "description": "Ich arbeite effektiv mit anderen zusammen und kommuniziere klar mit Teammitgliedern."
+        },
+        "detailOriented": {
+          "title": "Detailorientiert",
+          "description": "Ich achte genau auf Details, um qualitativ hochwertige Ergebnisse sicherzustellen."
+        }
+      }
+    },
+    "projects": {
+      "title": "Projekte",
+      "subtitle": "Ein Blick auf mein aktuelles Zeug",
+      "documentation": "Docs",
+      "github": "Zu GitHub",
+      "geographieQuiz": {
+        "name": "Geographie-Quiz",
+        "description": "Eine interaktive Geographie-Quiz-Anwendung mit WinForms erstellt."
+      },
+      "memeGenerator": {
+        "name": "Meme-Generator",
+        "description": "Eine Webanwendung, mit der Benutzer benutzerdefinierte Memes mit verschiedenen Vorlagen erstellen können."
+      },
+      "mittagessenplaner": {
+        "name": "Mittagessenplaner",
+        "description": "Eine Anwendung zur Planung von Mittagessen für die Woche."
+      },
+      "verschlusselungswebseite": {
+        "name": "Verschlüsselungswebseite",
+        "description": "Eine Website zum Verschlüsseln und Entschlüsseln von Nachrichten mit verschiedenen Algorithmen."
+      }
+    },
+    "documentation": {
+      "verschluesselung": {
+        "title": "Verschlüsselungswebseite",
+        "task": {
+          "title": "Aufgabenstellung",
+          "content": "Die Aufgabe bestand darin, eine Applikation zu erstellen, mit der verschiedene Verschlüsselungsverfahren ausgewählt und angewendet werden können, sodass man untereinander verschlüsselte Nachrichten und eventuell Bilder austauschen kann. Unsere Gruppe (Kamil, Shaheer) hat sich entschieden, anstatt einer App eine Webseite zu erstellen."
+        },
+        "goals": {
+          "title": "Ziele",
+          "items": [
+            "Wörter verschlüsseln können",
+            "Wörter mit einem Key entschlüsseln können"
+          ]
+        },
+        "product": {
+          "title": "Produkt",
+          "content": "Wir haben eine Webseite erstellt, mit der man Wörter oder sogar Sätze verschlüsseln und entschlüsseln kann. Zuerst gibt man das Wort bzw. den Satz ein und drückt auf \"Encode\". Danach wird das verschlüsselte Wort angezeigt und man erhält gleichzeitig einen Schlüssel, mit dem die Nachricht entschlüsselt werden kann.",
+          "method": {
+            "title": "Verschlüsselungsverfahren",
+            "content": "Für das Verschlüsselungsverfahren haben wir uns für die Caesar-Verschlüsselung entschieden. Diese funktioniert, indem Buchstaben im Alphabet um eine festgelegte Anzahl von Stellen verschoben werden. Der Schlüssel ist die Anzahl der Stellen, um die verschoben wurde. Wir haben uns für diese Methode entschieden, weil sie einfach zu implementieren war und wir darüber in Modul 114 gelernt haben."
+          },
+          "technologies": {
+            "title": "Technologien",
+            "items": ["HTML", "CSS", "JavaScript"]
+          },
+          "codeExample": "Codebeispiel",
+          "examples": "Beispiele:",
+          "encryptedMessage": "Verschlüsselte Nachricht mit richtigen Schlüssel:"
+        },
+        "video": "Videodemonstration",
+        "reflection": {
+          "title": "Reflexion / Auswertung",
+          "reflection": {
+            "title": "Reflexion",
+            "content": "Das Projekt verlief grundsätzlich positiv, da wir uns intensiv mit verschiedenen Verschlüsselungsmethoden beschäftigten. Allerdings stießen wir auf Herausforderungen bei der Teamkoordination, was zu ineffizienter Zeitnutzung führte. Trotzdem fiel die Entscheidung für eine Verschlüsselungsmethode positiv aus."
+          },
+          "difficulties": {
+            "title": "Schwierigkeiten",
+            "content": "Ein Hindernis war unsere morgendliche Müdigkeit, die unsere Produktivität beeinträchtigte. Für zukünftige Projekte ist es wichtig, frühzeitige Lösungen für dieses Problem zu finden. Wir sollten auch unsere Teamarbeit verbessern und eine klarere Aufgabenverteilung sicherstellen, um Zeitverluste zu vermeiden."
+          },
+          "conclusion": {
+            "title": "Fazit",
+            "content": "Trotz der Schwierigkeiten waren wir in der Lage, unsere Ziele zu erreichen, wenn auch nicht so effizient wie erhofft. Dies zeigt, dass eine verbesserte Teamkoordination und Organisation für den Erfolg entscheidend sind."
+          }
+        }
+      },
+      "mittagessenplaner": {
+        "title": "Mittagessenplaner: Webanwendung zur Verwaltung und Planung von Mittagessen",
+        "summary": {
+          "title": "Zusammenfassung",
+          "content": "Der Mittagessenplaner ist eine Webanwendung, die es Nutzern ermöglicht, sich für verschiedene Orte zum Mittagessen anzumelden und zu sehen, wer sonst noch dort sein wird. Dies erleichtert es den Nutzern, ihre Freunde zu finden und gemeinsam Mittag zu essen. Das Projekt umfasst die Implementierung von Benutzerregistrierung, -anmeldung, Anzeige von Mittagessensorten und Check-In-Funktionalität unter Verwendung von MongoDB, Express, Node.js und einfachem HTML/CSS/JavaScript für das Frontend."
+        },
+        "task": {
+          "title": "Aufgabenstellung / Ziele",
+          "content": "Das Ziel war es, eine Webanwendung zu entwickeln, die verschiedene Mittagessensorte speichert und es Benutzern ermöglicht, sich für ein Datum an einem dieser Orte einzuchecken. Dabei sollten Technologien wie MongoDB, Express, Node.js und JavaScript eingesetzt werden.",
+          "goals": "Ziele:",
+          "items": [
+            "Entwicklung einer benutzerfreundlichen Registrierung und Anmeldung (Muss)",
+            "Anzeige der verschiedenen Mittagessensorte (Muss)",
+            "Implementierung einer Check-In-Funktionalität (Muss)",
+            "Speicherung der Daten in einer NoSQL-Datenbank (Muss)",
+            "Anzeige der Check-Ins der Nutzer (Kann)"
+          ]
+        },
+        "product": {
+          "title": "Produkt",
+          "content": "Der Mittagessenplaner ist eine Webanwendung, die es Nutzern ermöglicht, sich zu registrieren, anzumelden, verschiedene Mittagessensorte anzuzeigen und sich für diese einzuchecken. Die Anwendung verwendet MongoDB zur Speicherung der Daten und Express.js für das Backend. Die Frontend-Komponenten bestehen aus HTML, CSS und JavaScript.",
+          "technologies": "Verwendete Technologien:",
+          "items": ["MongoDB", "Express.js", "Node.js", "HTML", "CSS", "JavaScript"],
+          "video": "Hier ist eine Videodemonstration des Mittagessenplaners:",
+          "screenshot": "Hier ist ein Screenshot der MongoDB-Benutzerdaten:",
+          "repo": "Link zum GitHub Repo"
+        },
+        "reflection": {
+          "title": "Reflexion / Auswertung",
+          "progress": {
+            "title": "Projektverlauf",
+            "content": "Das Projekt begann mit der Grundstruktur und der Implementierung der Benutzerregistrierung und -anmeldung. Anschließend wurden die verschiedenen Mittagessensorte hinzugefügt und im Frontend angezeigt. Die Check-In-Funktionalität wurde als letztes implementiert."
+          },
+          "insights": {
+            "title": "Erkenntnisse und Schwierigkeiten",
+            "content": "Während der Entwicklung traten Probleme mit der Token-Authentifizierung auf, insbesondere, weil beim Registrierungsprozess keine userId zu den Benutzerdaten hinzugefügt wurde. Dies führte dazu, dass die Check-In-Funktionalität teilweise nicht funktionierte."
+          },
+          "good": {
+            "title": "Was lief gut?",
+            "content": "Die Grundstruktur und die Implementierung der Registrierung und Anmeldung verliefen reibungslos. Die Anzeige der Mittagessensorte im Frontend funktionierte ebenfalls wie geplant."
+          },
+          "bad": {
+            "title": "Was lief nicht gut?",
+            "content": "Die Token-Authentifizierung und die fehlende userId führten zu Problemen beim Check-In-Prozess."
+          },
+          "measures": {
+            "title": "Konkrete Maßnahmen für zukünftige Projekte",
+            "items": [
+              "Frühe und gründliche Tests der Authentifizierungsprozesse, um sicherzustellen, dass alle notwendigen Daten korrekt gespeichert werden.",
+              "Häufigere Überprüfungen und Tests der gesamten Funktionalität während der Entwicklung."
+            ]
+          }
+        }
+      },
+      "geographieQuiz": {
+        "title": "Geographie-Quiz als interaktive WinForms-Applikation",
+        "task": {
+          "title": "Aufgabenstellung",
+          "content": "Im Rahmen des Lernateliers haben wir uns entschieden, eine Windows-Forms-Applikation in C# zu entwickeln. Das Ziel war es, ein Geographie-Quiz zu erstellen, das die Kenntnisse über Hauptstädte testet.",
+          "items": [
+            "Am Schluss dieses Lern- und Arbeitsauftrages sollen Sie ein fertiges Produkt mit Projektdokumentation erstellt haben."
+          ]
+        },
+        "goals": {
+          "title": "Ziele",
+          "content": "Meine persönlichen Ziele waren:",
+          "items": [
+            "Realisierung eines interaktiven Programms unter Verwendung von WinForms und dessen Steuerelementen.",
+            "Anwendung von objektorientierten Prinzipien für eine strukturierte und wartbare Codebasis."
+          ]
+        },
+        "product": {
+          "title": "Produkt",
+          "content": "Das Endergebnis ist eine C#-WinForms-Applikation, die Benutzer durch verschiedene Quizmodule führt. Jedes Modul stellt Fragen zu einem anderen geographischen Thema.",
+          "flowchart": "Ein vorbereitender Schritt war das Erstellen eines Programmablaufplans:",
+          "repo": "Der Quellcode des Projekts befindet sich im GitHub-Repo."
+        },
+        "demonstration": {
+          "title": "Demonstration",
+          "content": "Hier sieht man, dass ich auf die falsche Antwort geklickt habe und das Programm hat dies erkannt und mir mitgeteilt, dass ich die falsche Antwort gewählt habe."
+        },
+        "reflection": {
+          "title": "Reflexion und Auswertung",
+          "content1": "Die grösste Herausforderung war die Aufteilung der Aufgaben und die Koordination im Team. Wir mussten lernen, unsere Kommunikation zu verbessern, um Missverständnisse zu vermeiden. Die Konzeption der User Stories und Testfälle half uns, die Anforderungen klar zu definieren und einen strukturierten Entwicklungsprozess zu etablieren.",
+          "content2": "Das Feedback unserer Mitschüler war wertvoll, um die Benutzerfreundlichkeit und das Design der Quizoberfläche zu verbessern.",
+          "content3": "Die Integration verschiedener Quizmodule in eine Anwendung und die Implementierung von Benutzerinteraktionen zeigt, dass wir dieses Ziel erreicht haben.",
+          "content4": "Insgesamt war das Projekt eine lehrreiche Erfahrung in der Softwareentwicklung, von der Planung bis zur Ausführung. Es hat unser Verständnis für die Entwicklung von interaktiven Anwendungen deutlich erweitert."
+        }
+      },
+      "memeGenerator": {
+        "title": "Meme-Generator: Webanwendung zum Erstellen von benutzerdefinierten Memes",
+        "task": {
+          "title": "Aufgabenstellung",
+          "content": "Die Aufgabe bestand darin, eine Webanwendung zu erstellen, mit der Benutzer aus verschiedenen Meme-Vorlagen auswählen und benutzerdefinierten Text hinzufügen können, um ihre eigenen Memes zu erstellen. Die Anwendung sollte einfach zu bedienen sein und eine reaktionsfähige Benutzeroberfläche bieten.",
+          "items": [
+            "Erstellen eines webbasierten Meme-Generators, der zugänglich und benutzerfreundlich ist",
+            "Ermöglichen, dass Benutzer aus einer Vielzahl von Meme-Vorlagen auswählen können",
+            "Ermöglichen des Hinzufügens von angepasstem Text zu den Vorlagen",
+            "Bereitstellen einer Download-Funktion für die erstellten Memes"
+          ]
+        },
+        "goals": {
+          "title": "Ziele",
+          "content": "Das Projekt zielte darauf ab:",
+          "items": [
+            "Eine responsive Webanwendung mit modernem HTML, CSS und JavaScript zu implementieren",
+            "Eine intuitive Benutzeroberfläche zu schaffen, die das Erstellen von Memes einfach macht",
+            "Geeignete Bildbearbeitungstechniken für die Textüberlagerung anzuwenden",
+            "Die browserübergreifende Kompatibilität sicherzustellen"
+          ]
+        },
+        "product": {
+          "title": "Produkt",
+          "content": "Wir haben einen webbasierten Meme-Generator entwickelt, mit dem Benutzer aus einer Reihe von beliebten Meme-Vorlagen auswählen können. Benutzer können Text oben und unten mit anpassbaren Optionen hinzufügen, ihre Kreation in Echtzeit vorschauen und das fertige Meme zum Teilen in sozialen Medien herunterladen.",
+          "features": {
+            "title": "Hauptfunktionen",
+            "items": [
+              "Vorlagenauswahl aus einer kuratierten Bibliothek",
+              "Textanpassung (Schriftart, Größe, Farbe)",
+              "Echtzeit-Vorschau",
+              "Ein-Klick-Download des erstellten Memes",
+              "Mobilgerätefreundliches Design"
+            ]
+          },
+          "technologies": {
+            "title": "Verwendete Technologien",
+            "items": ["HTML5", "CSS3", "JavaScript", "Canvas API"]
+          },
+          "repo": "Link zum GitHub-Repository"
+        },
+        "demonstration": {
+          "title": "Demonstration",
+          "content": "Das folgende Video zeigt, wie der Meme-Generator funktioniert. Benutzer können eine Vorlage auswählen, benutzerdefinierten Text hinzufügen, Texteigenschaften anpassen und ihre Kreation herunterladen."
+        },
+        "reflection": {
+          "title": "Reflexion und Auswertung",
+          "challenges": {
+            "title": "Herausforderungen",
+            "content": "Eine der Hauptherausforderungen war die Implementierung einer korrekten Textpositionierung auf verschiedenen Meme-Vorlagen, da jede Vorlage einzigartige Abmessungen und optimale Textplatzierungen hat. Darüber hinaus erforderte die Sicherstellung, dass die Anwendung auf mobilen Geräten gut funktioniert, eine sorgfältige Beachtung der Prinzipien des responsiven Designs."
+          },
+          "learnings": {
+            "title": "Erkenntnisse",
+            "content": "Dieses Projekt bot wertvolle Erfahrungen im Umgang mit der Canvas-API für Bildmanipulation und Textüberlagerung. Wir haben auch unsere Fähigkeiten verbessert, intuitive Benutzeroberflächen zu erstellen und Dateioperationen in JavaScript zu handhaben."
+          },
+          "improvements": {
+            "title": "Potenzielle Verbesserungen",
+            "items": [
+              "Hinzufügen der Möglichkeit, benutzerdefinierte Vorlagen hochzuladen",
+              "Implementierung fortgeschrittenerer Textstyling-Optionen",
+              "Hinzufügen von Funktionen zum Teilen in sozialen Medien",
+              "Einbindung eines Benutzerkontos-Systems zum Speichern erstellter Memes"
+            ]
+          },
+          "conclusion": {
+            "title": "Fazit",
+            "content": "Das Meme-Generator-Projekt war erfolgreich bei der Erfüllung seiner Kernziele. Es zeigte unsere Fähigkeit, funktionale, benutzerfreundliche Webanwendungen zu erstellen, die Front-End-Technologien effektiv kombinieren. Das Endprodukt ist sowohl praktisch als auch unterhaltsam und erfüllt seinen Zweck, Benutzern das einfache Erstellen von benutzerdefinierten Memes zu ermöglichen."
+          }
+        }
+      }
+    },
+    "contact": {
+      "title": "Lass uns reden",
+      "subtitle": "Schreib mir",
+      "name": "Dein Name",
+      "email": "Deine E-Mail",
+      "message": "Deine Nachricht",
+      "send": "Abschicken"
+    },
+    "footer": {
+      "copyright": "© 2025 Kamil Bielski.",
+      "language": "Sprache"
+    }
+  }

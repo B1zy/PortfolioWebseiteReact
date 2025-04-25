@@ -7,9 +7,10 @@ import { getRandomColorCombination } from './randomColor';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next'; // Add this import
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'devicon/devicon.min.css';
-
+import './i18n'; // important!
 // Import section components
 import IntroSection from './sections/IntroSection';
 import AboutSection from './sections/AboutSection';
@@ -34,6 +35,8 @@ function ScrollToTop() {
 }
 
 function App() {
+  const { t } = useTranslation(); // Add translation hook
+
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
@@ -130,14 +133,14 @@ function App() {
       
       <header className="header">
         <div className="logo">
-          <HashLink smooth to="/#top">My Portfolio</HashLink>
+          <HashLink smooth to="/#top">{t('nav.logo')}</HashLink>
         </div>
         <nav className="navbar">
           <ul>
-            <li><HashLink smooth to="/#top">Home</HashLink></li>
-            <li><HashLink smooth to="/#about">About Me</HashLink></li>
-            <li><HashLink smooth to="/#projects">Projects</HashLink></li>
-            <li><HashLink smooth to="/#contact">Contact</HashLink></li>
+            <li><HashLink smooth to="/#top">{t('nav.home')}</HashLink></li>
+            <li><HashLink smooth to="/#about">{t('nav.about')}</HashLink></li>
+            <li><HashLink smooth to="/#projects">{t('nav.projects')}</HashLink></li>
+            <li><HashLink smooth to="/#contact">{t('nav.contact')}</HashLink></li>
           </ul>
         </nav>
       </header>

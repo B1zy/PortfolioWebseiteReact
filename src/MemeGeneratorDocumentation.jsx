@@ -1,39 +1,63 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 function MemeGeneratorDocumentation() {
+  const { t } = useTranslation();
+  
   return (
     <div className="documentation">
-      <h2>Meme-Generator</h2>
+      <h2>{t('documentation.memeGenerator.title')}</h2>
 
       <section>
-        <h3>Aufgabenstellung</h3>
-        <p>
-          Der Auftrag, den ich gewählt habe, war, einen Meme-Generator als Webapplikation zu erstellen und sich dabei intensiver mit der Entwicklung eines Frontends zu beschäftigen.
-          Folgende Ziele wurden gesetzt:
-        </p>
+        <h3>{t('documentation.memeGenerator.task.title')}</h3>
+        <p>{t('documentation.memeGenerator.task.content')}</p>
         <ul>
-          <li>Z1: Es sollen einige Templates zur Verfügung stehen.</li>
-          <li>Z2: Der Enduser soll den Text frei bestimmen können.</li>
+          {t('documentation.memeGenerator.task.items', { returnObjects: true }).map((item, index) => (
+            <li key={index}>{item}</li>
+          ))}
         </ul>
       </section>
 
       <section>
-        <h3>Produkt</h3>
+        <h3>{t('documentation.memeGenerator.goals.title')}</h3>
+        <p>{t('documentation.memeGenerator.goals.content')}</p>
+        <ul>
+          {t('documentation.memeGenerator.goals.items', { returnObjects: true }).map((item, index) => (
+            <li key={index}>{item}</li>
+          ))}
+        </ul>
+      </section>
+
+      <section>
+        <h3>{t('documentation.memeGenerator.product.title')}</h3>
+        <p>{t('documentation.memeGenerator.product.content')}</p>
+        
+        <h4>{t('documentation.memeGenerator.product.features.title')}</h4>
+        <ul>
+          {t('documentation.memeGenerator.product.features.items', { returnObjects: true }).map((feature, index) => (
+            <li key={index}>{feature}</li>
+          ))}
+        </ul>
+
+        <h4>{t('documentation.memeGenerator.product.technologies.title')}</h4>
+        <ul>
+          {t('documentation.memeGenerator.product.technologies.items', { returnObjects: true }).map((tech, index) => (
+            <li key={index}>{tech}</li>
+          ))}
+        </ul>
+
         <p>
-          Ein Meme-Generator ist eine Webseite oder App, die es Nutzern ermöglicht, schnell und einfach eigene Memes zu erstellen. 
-          Mit einer benutzerfreundlichen Oberfläche können sie Bilder, Texte und Layouts kombinieren, um humorvolle Internet-Memes zu gestalten.
-        </p>
-        <p>
-          Das Projekt zielt darauf ab, einen funktionsfähigen Meme-Generator zu erstellen, um die Anwendung von HTML, CSS, JavaScript und Express in einem praktischen Szenario zu vertiefen. 
-          Besonders möchte ich Erfahrungen im Umgang mit Benutzereingaben, Bildmanipulation und Dateiuploads sammeln.
+          <a href="https://github.com/B1zy/La1302-Jahr-2/blob/main/Projektdokumentation.md" 
+             target="_blank" 
+             rel="noopener noreferrer">
+            {t('documentation.memeGenerator.product.repo')}
+          </a>
         </p>
       </section>
 
       <section>
-        <h3>Demonstration</h3>
-        <p>Hier ist ein Bild vom Meme-Generator Interface:</p>
-        <img src="/PortfolioWebseiteReact/images/116445-Screenshot 2024-01-06 171610.png" alt="Meme Generator Interface" style={{ maxWidth: '100%', height: 'auto', borderRadius: '10px' }} />
-        <p>Und hier ist ein kurzes Demonstrationsvideo des Meme-Generators:</p>
+        <h3>{t('documentation.memeGenerator.demonstration.title')}</h3>
+        <p>{t('documentation.memeGenerator.demonstration.content')}</p>
         <video controls style={{ maxWidth: '100%', borderRadius: '10px' }}>
           <source src="/PortfolioWebseiteReact/videos/116434-2024-01-06 16-06-33.mp4" type="video/mp4" />
           Your browser does not support the video tag.
@@ -41,26 +65,23 @@ function MemeGeneratorDocumentation() {
       </section>
 
       <section>
-        <h3>Reflexion/Auswertung</h3>
-        <p>
-          Das Projekt hat mir wirklich viel gebracht und war definitiv eine Herausforderung. 
-          Ich habe mich intensiv mit Dateiuploads und Overlay-Textfeldern auseinandergesetzt, was dem Meme-Generator mehr Tiefe und Benutzerfreundlichkeit verleiht. 
-          Der Versuch, einen Server aufzubauen und ihn auf Heroku zu hosten, war eine steile Lernkurve. 
-          Es wurde jedoch klar, dass diese fortgeschrittenen Funktionen für das Kernziel des Generators nicht unbedingt erforderlich waren. 
-          Das hat mich dazu gebracht, meine Prioritäten neu zu setzen und mich auf das Wesentliche zu konzentrieren.
-        </p>
-        <p>
-          Insgesamt bin ich mit dem Endprodukt zufrieden, aber natürlich gibt es immer Raum für Verbesserungen. 
-          Insbesondere fiel mir auf, dass der heruntergeladene Text kleiner ist als in der Browser-Anzeige und möglicherweise nicht genau dem entspricht, was im Browser angezeigt wird.
-        </p>
-      </section>
-
-      <section>
-        <h4>Verifizierung der Ziele:</h4>
+        <h3>{t('documentation.memeGenerator.reflection.title')}</h3>
+        
+        <h4>{t('documentation.memeGenerator.reflection.challenges.title')}</h4>
+        <p>{t('documentation.memeGenerator.reflection.challenges.content')}</p>
+        
+        <h4>{t('documentation.memeGenerator.reflection.learnings.title')}</h4>
+        <p>{t('documentation.memeGenerator.reflection.learnings.content')}</p>
+        
+        <h4>{t('documentation.memeGenerator.reflection.improvements.title')}</h4>
         <ul>
-          <li>Z1: Es stehen einige Templates zur Verfügung.</li>
-          <li>Z2: Der Enduser kann den Text und die Position davon frei bestimmen.</li>
+          {t('documentation.memeGenerator.reflection.improvements.items', { returnObjects: true }).map((item, index) => (
+            <li key={index}>{item}</li>
+          ))}
         </ul>
+        
+        <h4>{t('documentation.memeGenerator.reflection.conclusion.title')}</h4>
+        <p>{t('documentation.memeGenerator.reflection.conclusion.content')}</p>
       </section>
     </div>
   );
