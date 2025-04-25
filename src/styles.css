@@ -936,4 +936,25 @@ p, h1, h2, h3, h4, h5, h6 {
     margin-top: 20px;
     margin-bottom: 20px;
   }
+  
+  /* Remove negative margin from traits section on mobile */
+  .traits-section {
+    margin-top: 20px; /* Change from negative to positive */
+  }
+  
+  /* Add more space at the bottom of skills section */
+  .skills-section {
+    padding-bottom: 40px; /* Add more bottom padding */
+  }
+  
+  /* Add more space above the traits heading */
+  .traits-section h3 {
+    margin-top: 20px;
+    padding-top: 20px;
+  }
+  
+  /* Ensure skill icons don't crowd the section below */
+  .skills-icons {
+    margin-bottom: 20px; /* Extra margin at the bottom */
+  }
 }
