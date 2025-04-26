@@ -119,7 +119,7 @@ p, span, a:not(.logo a), li, button, input, textarea, label, div {
     padding: 10px 0;
   }
   .header{
-    background-color: transparent !important; /* Make header transparent */
+    background-color: transparent !important; /*  transparent */
   }
   /* Optional: Add a home icon instead of text */
   .logo a::before {

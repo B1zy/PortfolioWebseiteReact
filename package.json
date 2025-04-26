@@ -5,10 +5,10 @@
   "homepage": "https://B1zy.github.io/PortfolioWebseiteReact/",
   "type": "module",
   "scripts": {
-    "predeploy": "npm run build",
+    "predeploy": "npm run build --legacy-peer-deps",
     "deploy": "gh-pages -d dist ",
     "dev": "vite",
-    "start": "react-scripts start",
+    "start": "vite dev",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
@@ -34,7 +34,6 @@
     "tsparticles-slim": "^2.9.3"
   },
   "devDependencies": {
-    "@craco/craco": "^5.9.0",
     "@eslint/js": "^9.9.0",
     "@fullhuman/postcss-purgecss": "^7.0.2",
     "@types/react": "^18.3.3",
@@ -49,6 +48,7 @@
     "jest": "^29.0.0",
     "postcss-cli": "^11.0.1",
     "purgecss": "^7.0.2",
+    "typescript": "^5.8.3",
     "vite": "^6.2.3",
     "vite-plugin-compression": "^0.5.1",
     "webpack-bundle-analyzer": "^4.10.2"
