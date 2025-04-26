@@ -8,7 +8,7 @@
     "predeploy": "npm run build --legacy-peer-deps",
     "deploy": "gh-pages -d dist ",
     "dev": "vite",
-    "start": "react-scripts start",
+    "start": "vite dev",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
@@ -34,7 +34,6 @@
     "tsparticles-slim": "^2.9.3"
   },
   "devDependencies": {
-    "@craco/craco": "^5.9.0",
     "@eslint/js": "^9.9.0",
     "@fullhuman/postcss-purgecss": "^7.0.2",
     "@types/react": "^18.3.3",
