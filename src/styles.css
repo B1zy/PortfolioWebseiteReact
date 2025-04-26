@@ -84,6 +84,68 @@ p, span, a:not(.logo a), li, button, input, textarea, label, div {
   text-decoration: none;
   position: relative; /* Required for the absolute positioning of the underline */
   transition: color 0.3s;
+  padding-left: 0; /* Default padding */
+}
+
+/* Logo text fix for iPhone notch/Dynamic Island */
+@media screen and (max-width: 430px) {
+  .logo a {
+    font-size: 1.3rem; /* Slightly smaller font on mobile */
+    padding-left: env(safe-area-inset-left, 15px); /* Use safe area or 15px minimum */
+    max-width: calc(100% - 50px); /* Ensure there's space for the burger menu */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Add ellipsis if text gets cut */
+  }
+  
+  /* Add extra space to the header for Dynamic Island */
+  .header {
+    padding-left: max(20px, env(safe-area-inset-left));
+    padding-right: max(20px, env(safe-area-inset-right));
+  }
+}
+@media screen and (max-width: 430px) {
+  .logo a {
+    font-size: 0; /* Hide the text */
+    width: 40px; /* Give it a reasonable width for clickability */
+    display: inline-block;
+    padding: 10px 0;
+  }
+  @media screen and (max-width: 430px) {
+  .logo a {
+    font-size: 0; /* Hide the text */
+    width: 40px; /* Give it a reasonable width for clickability */
+    display: inline-block;
+    padding: 10px 0;
+  }
+  .header{
+    background-color: transparent !important; /* Make header transparent */
+  }
+  /* Optional: Add a home icon instead of text */
+  .logo a::before {
+    content: "\f015"; /* Font Awesome home icon */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: #ffffff;
+  }
+}
+  /* Optional: Add a home icon instead of text */
+  .logo a::before {
+    content: "\f015"; /* Font Awesome home icon */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: #ffffff;
+  }
+}
+/* Even more specific fix for iPhone 16 Pro and similar models */
+@media screen and (device-width: 393px) and (device-height: 852px),
+       screen and (device-width: 390px) and (device-height: 844px) {
+  .logo a {
+    font-size: 1.25rem; /* Even smaller font for specific devices */
+    padding-left: calc(env(safe-area-inset-left) + 10px); /* Add extra padding */
+  }
 }
 
 /* Add animated underline effect to logo */
@@ -956,5 +1018,58 @@ p, h1, h2, h3, h4, h5, h6 {
   /* Ensure skill icons don't crowd the section below */
   .skills-icons {
     margin-bottom: 20px; /* Extra margin at the bottom */
+  }
+  
+  /* Fix asymmetrical spacing on project boxes */
+  .projects-container {
+    width: calc(100% - 20px); /* Adjust width to account for margins */
+    margin-left: 10px; /* Equal margins on both sides */
+    margin-right: 10px;
+    padding: 15px; /* Less padding on mobile */
+  }
+  
+  /* Ensure the section doesn't add extra padding */
+  .projects-section {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  /* Make sure individual project boxes have equal margins */
+  .project-box {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/* iPhone Dynamic Island fixes */
+@media screen and (device-width: 390px) and (device-height: 844px),
+       screen and (device-width: 393px) and (device-height: 852px),
+       screen and (device-width: 428px) and (device-height: 926px),
+       screen and (device-width: 430px) and (device-height: 932px),
+       screen and (device-width: 375px) and (device-height: 812px) {
+  
+  /* Apply safe areas to all major containers */
+  .projects-section, .about-section, .intro-section, .contact-section {
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+  
+  /* Fix project container spacing */
+  .projects-container {
+    width: calc(100% - env(safe-area-inset-left) - env(safe-area-inset-right) - 10px);
+    margin-left: max(5px, env(safe-area-inset-left));
+    margin-right: max(5px, env(safe-area-inset-right));
+  }
+  
+  /* Ensure header respects safe areas */
+  .header {
+    padding-left: max(20px, env(safe-area-inset-left));
+    padding-right: max(20px, env(safe-area-inset-right));
+    padding-top: max(10px, env(safe-area-inset-top));
+  }
+  
+  /* Add padding to the top of the page to account for Dynamic Island */
+  body {
+    padding-top: env(safe-area-inset-top);
   }
 }

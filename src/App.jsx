@@ -157,7 +157,7 @@ function App() {
         {/* Standard navigation for desktop */}
         <nav className="navbar desktop-nav">
           <ul>
-            <li><HashLink smooth to="/#top">{t('nav.home')}</HashLink></li>
+            
             <li><HashLink smooth to="/#about">{t('nav.about')}</HashLink></li>
             <li><HashLink smooth to="/#projects">{t('nav.projects')}</HashLink></li>
             <li><HashLink smooth to="/#contact">{t('nav.contact')}</HashLink></li>
