@@ -1,5 +1,4 @@
 import React from "react";
-import "./AboutSection.css";
 import { useTranslation } from 'react-i18next';
 
 function AboutSection() {
@@ -73,13 +72,14 @@ function AboutSection() {
             <div className="profile-image-container">
               <img
                 src="/PortfolioWebseiteReact/images/Lebenslauf_KamilBielski.jpeg"
+                loading ="lazy"
                 alt="Developer Portrait"
                 className="profile-image"
               />
             </div>
             <div className="profile-links">
               <a
-                href="src/Modern Elegant Lebenslauf Beige Weiß-1.pdf"
+                hrefhref="/PortfolioWebseiteReact/Modern Elegant Lebenslauf Beige Weiß-1.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="profile-link resume-link"
@@ -155,6 +155,7 @@ function AboutSection() {
                   ) : (
                     <img 
                       src={skill.svg} 
+                      loading ="lazy"
                       alt="Skill icon" 
                       style={{ width: "28px", height: "28px" }} 
                     />

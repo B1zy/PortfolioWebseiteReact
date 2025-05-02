@@ -11,6 +11,8 @@ import { useTranslation } from 'react-i18next'; // Add this import
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'devicon/devicon.min.css';
 import './i18n'; // important!
+// Import language dropdown component
+import LanguageDropdown from './components/LanguageDropdown';
 // Import section components
 import IntroSection from './sections/IntroSection';
 import AboutSection from './sections/AboutSection';
@@ -152,6 +154,7 @@ function App() {
           <div className={`burger-bar ${mobileMenuOpen ? 'open' : ''}`}></div>
           <div className={`burger-bar ${mobileMenuOpen ? 'open' : ''}`}></div>
           <div className={`burger-bar ${mobileMenuOpen ? 'open' : ''}`}></div>
+          <div className="header-language-switcher"><LanguageDropdown /></div>
         </div>
         
         {/* Standard navigation for desktop */}
@@ -161,8 +164,11 @@ function App() {
             <li><HashLink smooth to="/#about">{t('nav.about')}</HashLink></li>
             <li><HashLink smooth to="/#projects">{t('nav.projects')}</HashLink></li>
             <li><HashLink smooth to="/#contact">{t('nav.contact')}</HashLink></li>
+            <div className="header-language-switcher"><LanguageDropdown /></div>
           </ul>
         </nav>
+        
+        
         
         {/* Mobile navigation overlay */}
         <div className={`mobile-nav-overlay ${mobileMenuOpen ? 'open' : ''}`}>
@@ -173,6 +179,12 @@ function App() {
               <li><HashLink smooth to="/#projects" onClick={closeMobileMenu}>{t('nav.projects')}</HashLink></li>
               <li><HashLink smooth to="/#contact" onClick={closeMobileMenu}>{t('nav.contact')}</HashLink></li>
             </ul>
+            
+            {/* Add language dropdown at bottom of mobile menu */}
+            <div className="mobile-language-switcher">
+              <p className="language-label">{t('footer.language')}</p>
+              <LanguageDropdown />
+            </div>
           </nav>
         </div>
       </header>

@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Work+Sans:wght@300;400;500;600&display=swap');
+/* Import Font Awesome for icon support */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
 
 /* General Reset */
 * {
@@ -7,21 +9,19 @@
   box-sizing: border-box;
 }
 
-/* Import Google Fonts */
-
 /* Base Styles */
 html, body {
   height: 100%;
-  overflow-y: auto; /* Allow scrolling for the entire page */
+  overflow-y: auto;
 }
 
 body {
   font-family: 'Work Sans', sans-serif;
-  color: #ffffff; /* White text for better contrast */
+  color: #ffffff;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: #000000; /* Black background */
+  background-color: #000000;
 }
 
 /* Apply font family to specific elements */
@@ -40,7 +40,7 @@ p, span, a:not(.logo a), li, button, input, textarea, label, div {
   height: 100%;
   top: 0;
   left: 0;
-  z-index: -1; /* Put it behind everything */
+  z-index: -1;
   pointer-events: none;
 }
 
@@ -59,8 +59,8 @@ p, span, a:not(.logo a), li, button, input, textarea, label, div {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px 20px; /* Increased horizontal padding */
-  background-color: rgba(0, 0, 0, 0.8) !important;
+  padding: 5px 20px;
+  background-color: rgba(0, 0, 0, 0.8);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
@@ -71,81 +71,39 @@ p, span, a:not(.logo a), li, button, input, textarea, label, div {
   padding-top: max(5px, env(safe-area-inset-top));
 }
 
-/* Updated logo styles with more breathing room */
+/* Language Switcher in Header */
+.header-language-switcher {
+  margin-left: 20px;
+}
+
+.header-language-switcher select {
+  background-color: rgba(50, 50, 50, 0.8);
+  color: white;
+  border: 1px solid #444;
+  padding: 5px 8px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
+
+.header-language-switcher select:hover {
+  border-color: #f36c18;
+}
+
+/* Logo styles */
 .logo {
   padding: 10px 0;
 }
 
-/* Updated style for logo link */
 .logo a {
   font-size: 1.5rem;
   font-weight: bold;
   color: #ffffff;
   text-decoration: none;
-  position: relative; /* Required for the absolute positioning of the underline */
+  position: relative;
   transition: color 0.3s;
-  padding-left: 0; /* Default padding */
-}
-
-/* Logo text fix for iPhone notch/Dynamic Island */
-@media screen and (max-width: 430px) {
-  .logo a {
-    font-size: 1.3rem; /* Slightly smaller font on mobile */
-    padding-left: env(safe-area-inset-left, 15px); /* Use safe area or 15px minimum */
-    max-width: calc(100% - 50px); /* Ensure there's space for the burger menu */
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis; /* Add ellipsis if text gets cut */
-  }
-  
-  /* Add extra space to the header for Dynamic Island */
-  .header {
-    padding-left: max(20px, env(safe-area-inset-left));
-    padding-right: max(20px, env(safe-area-inset-right));
-  }
-}
-@media screen and (max-width: 430px) {
-  .logo a {
-    font-size: 0; /* Hide the text */
-    width: 40px; /* Give it a reasonable width for clickability */
-    display: inline-block;
-    padding: 10px 0;
-  }
-  @media screen and (max-width: 430px) {
-  .logo a {
-    font-size: 0; /* Hide the text */
-    width: 40px; /* Give it a reasonable width for clickability  d*/
-    display: inline-block;
-    padding: 10px 0;
-  }
-  .header{
-    background-color: transparent !important; /*  transparent */
-  }
-  /* Optional: Add a home icon instead of text */
-  .logo a::before {
-    content: "\f015"; /* Font Awesome home icon */
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    font-size: 1.5rem;
-    color: #ffffff;
-  }
-}
-  /* Optional: Add a home icon instead of text */
-  .logo a::before {
-    content: "\f015"; /* Font Awesome home icon */
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    font-size: 1.5rem;
-    color: #ffffff;
-  }
-}
-/* Even more specific fix for iPhone 16 Pro and similar models */
-@media screen and (device-width: 393px) and (device-height: 852px),
-       screen and (device-width: 390px) and (device-height: 844px) {
-  .logo a {
-    font-size: 1.25rem; /* Even smaller font for specific devices */
-    padding-left: calc(env(safe-area-inset-left) + 10px); /* Add extra padding */
-  }
+  padding-left: 0;
 }
 
 /* Add animated underline effect to logo */
@@ -154,23 +112,24 @@ p, span, a:not(.logo a), li, button, input, textarea, label, div {
   position: absolute;
   width: 0;
   height: 2px;
-  bottom: -5px; /* Position slightly lower than the text */
+  bottom: -5px;
   left: 50%;
-  background-color: #f36c18; /* Match your highlight color */
+  background-color: #f36c18;
   transition: all 0.3s ease;
   transform: translateX(-50%);
 }
 
 /* Show underline on hover */
 .logo a:hover::after {
-  width: 110%; /* Width of the underline when hovered - slightly wider than nav items */
+  width: 110%;
 }
 
 /* Match the text color change with navigation */
 .logo a:hover {
-  color: #f36c18; /* Match your highlight color */
+  color: #f36c18;
 }
 
+/* Navigation Menu */
 .navbar ul {
   display: flex;
   list-style: none;
@@ -189,9 +148,9 @@ p, span, a:not(.logo a), li, button, input, textarea, label, div {
   transition: color 0.3s;
 }
 
-/* Remove the previous hover background style */
 .navbar ul li a:hover {
-  background-color: transparent; /* Remove background color */
+  background-color: transparent;
+  color: #f36c18;
 }
 
 /* Add animated underline effect */
@@ -202,18 +161,13 @@ p, span, a:not(.logo a), li, button, input, textarea, label, div {
   height: 2px;
   bottom: 0;
   left: 50%;
-  background-color: #f36c18; /* Match your highlight color */
+  background-color: #f36c18;
   transition: all 0.3s ease;
   transform: translateX(-50%);
 }
 
 .navbar ul li a:hover::after {
-  width: 70%; /* Width of the underline when hovered */
-}
-
-/* Optional: Add a subtle color change on hover */
-.navbar ul li a:hover {
-  color: #f36c18; /* Match your highlight color */
+  width: 70%;
 }
 
 /* General section styling */
@@ -223,18 +177,18 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  position: relative; /* Add this */
-  overflow: hidden;  /* Add this to prevent bleeding */
+  position: relative;
+  overflow: hidden;
 }
 
 .section-title {
-  font-size: 2.2rem; /* Slightly smaller */
-  margin-bottom: 0.8rem; /* Reduced spacing */
+  font-size: 2.2rem;
+  margin-bottom: 0.8rem;
 }
 
 .section-subtitle {
   font-size: 1.2rem;
-  margin-bottom: 2rem; /* Reduced from 3rem */
+  margin-bottom: 2rem;
 }
 
 /* Highlight for name */
@@ -258,38 +212,39 @@ h1 {
 
 /* Adjust section spacing */
 .about-section, .projects-section, .contact-section {
-  min-height: auto; /* Remove min-height: 100vh */
-  padding: 60px 20px; /* Reduced from 80px */
+  min-height: auto;
+  padding: 60px 20px;
 }
 
 /* Projects Section */
 .projects-section {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   padding: 80px 20px;
 }
 
 .projects-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Reduced minimum width from 300px */
-  gap: 20px; /* Reduced from 30px */
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 30px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .project-box {
   position: relative;
   padding: 20px;
-  background-color: rgba(20, 20, 20, 0.7); /* Darker semi-transparent for projects */
+  background-color: rgba(20, 20, 20, 0.7);
   color: white;
   border-radius: 8px;
   transition: transform 0.3s ease;
   overflow: hidden;
-  height: auto; /* Remove fixed height */
-  min-height: 250px; /* Use min-height instead of fixed height */
+  height: auto;
+  min-height: 250px;
   display: flex;
   flex-direction: column;
 }
@@ -305,11 +260,11 @@ h1 {
 .project-links {
   z-index: 2;
   position: relative;
-  margin-top: auto; /* Push to bottom */
+  margin-top: auto;
 }
 
 .project-box:hover {
-  transform: translateY(-5px); /* Use translateY instead of scale */
+  transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -392,7 +347,7 @@ h1 {
 .skills-section, 
 .traits-section {
   position: relative;
-  z-index: 5; /* Higher z-index to appear above background */
+  z-index: 5;
 }
 
 .skill-bar,
@@ -416,22 +371,22 @@ h1 {
   text-align: center;
   transition: transform 0.3s ease;
   position: relative;
-  z-index: 10; /* Higher z-index */
+  z-index: 10;
 }
 
 .skill-icon i {
   font-size: 3rem;
   margin-bottom: 10px;
-  color: #f36c18; /* Set to your highlight orange color */
+  color: #f36c18;
 }
 
 .skill-icon:hover i {
-  color: #ffffff; /* Change color on hover to white for contrast */
+  color: #ffffff;
 }
 
 .skill-icon span {
   font-size: 0.9rem;
-  color: #ffffff; /* Ensure text is white for better visibility */
+  color: #ffffff;
 }
 
 /* Traits Section */
@@ -447,7 +402,7 @@ h1 {
 }
 
 .trait-card {
-  background: rgba(40, 40, 40, 0.7) !important; /* Dark, semi-transparent backgrounds */
+  background: rgba(40, 40, 40, 0.7);
   backdrop-filter: blur(5px);
   padding: 20px;
   border-radius: 10px;
@@ -455,7 +410,7 @@ h1 {
   transition: transform 0.3s ease;
   text-align: center;
   position: relative;
-  z-index: 10; /* Higher z-index */
+  z-index: 10;
   color: #ffffff;
 }
 
@@ -564,7 +519,7 @@ textarea {
 button {
   padding: 15px;
   font-size: 1rem;
-  background-color: #f36c18; /* Use your accent color */
+  background-color: #f36c18;
   color: #ffffff;
   border: none;
   border-radius: 8px;
@@ -595,23 +550,6 @@ button:hover {
   background-color: rgba(255, 0, 51, 0.1);
 }
 
-/* Contact Section */
-.contact-container {
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
-  border-radius: 10px;
-  padding: 20px;
-  margin: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.contact-content {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 30px;
-}
-
 .contact-info {
   background-color: rgba(30, 30, 30, 0.7);
   padding: 20px;
@@ -634,9 +572,20 @@ button:hover {
   gap: 15px;
 }
 
-social-links a {
+.social-links {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.social-link {
+  font-size: 1.2rem;
   color: white;
-  font-size: 1.5rem;
+  transition: color 0.3s ease;
+  display: inline-flex;
+}
+
+.social-link:hover {
+  color: #f36c18;
 }
 
 .contact-form {
@@ -684,16 +633,78 @@ social-links a {
   color: #ffffff;
 }
 
-/* Footer Styles */
-.footer {
-  background-color: rgba(0, 0, 0, 0.8) !important; /* Slightly more opaque for header/footer */
-  color: #fff;
-  padding: 20px;
+/* Mobile Language Switcher */
+.mobile-language-switcher {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-language-switcher .language-label {
+  margin-bottom: 10px;
+  color: #f36c18;
+}
+
+.mobile-language-switcher select {
+  background-color: rgba(50, 50, 50, 0.8);
+  color: white;
+  border: 1px solid #f36c18;
+  padding: 8px 15px;
+  border-radius: 4px;
+  font-size: 1rem;
+  width: 150px;
   text-align: center;
+}
+
+/* Footer Styles - Updated for inline icons and text */
+.footer {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 8px 20px; /* Even smaller vertical padding */
   width: 100%;
   box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
   font-size: 0.9rem;
   margin-top: auto;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.social-link {
+  font-size: 1.2rem;
+  color: white;
+  transition: color 0.3s ease;
+  display: inline-flex;
+  text-decoration: none;
+}
+
+.social-link:hover {
+  color: #f36c18;
+}
+
+.contact-email {
+  display: inline-block;
+}
+
+/* For mobile devices, adjust spacing */
+@media (max-width: 576px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 5px 0;
+  }
+  
+  .social-link {
+    display: none; /* Hide social links on mobile */
+  }
 }
 
 /* Documentation Styles */
@@ -726,18 +737,18 @@ social-links a {
   color: #ffffff;
 }
 
-/* Remove the min-height and padding requirements for documentation sections */
+/* Documentation sections */
 .documentation section {
   background-color: #333;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   color: #fff;
-  min-height: auto; /* Override the min-height from general section styling */
-  display: block; /* Override the flex display */
-  justify-content: flex-start; /* Override the center justification */
-  overflow: visible; /* Allow content to be visible */
-  margin-bottom: 20px; /* Add some space between sections */
+  min-height: auto;
+  display: block;
+  justify-content: flex-start;
+  overflow: visible;
+  margin-bottom: 20px;
 }
 
 .documentation img,
@@ -750,55 +761,14 @@ social-links a {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Add a more specific rule to override general section styling for documentation sections */
+/* Override general section styling for documentation sections */
 .documentation > section {
   min-height: unset !important;
   padding: 20px !important;
   margin: 0 0 20px 0 !important;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .contact-content {
-    grid-template-columns: 1fr;
-  }
-  
-  .documentation {
-    padding: 10px;
-  }
-  
-  .documentation section {
-    padding: 15px;
-  }
-
-  h1 {
-    font-size: 2rem;
-  }
-  
-  .intro-section h1 {
-    font-size: 2.5rem; /* Smaller on mobile */
-  }
-  
-  /* Reduce general spacing */
-  .section-title {
-    margin-bottom: 0.5rem;
-  }
-}
-
-@media (max-width: 600px) {
-  .form-row {
-    flex-direction: column;
-  }
-}
-
-/* Add this to your main CSS file (src/index.css or App.css) */
-
-.main-content, .intro-section, .about-section, .projects-section, .contact-section {
-  background-color: transparent !important; /* Make sections transparent */
-  color: rgb(0, 0, 0); /* Light text on dark background */
-}
-
-/* Add some container styling to make content stand out */
+/* Container styling */
 .about-container, .intro-container, .projects-container, .contact-container {
   border-radius: 10px;
   padding: 20px;
@@ -806,12 +776,12 @@ social-links a {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Adjust card and trait backgrounds to be semi-transparent */
+/* Semi-transparent backgrounds */
 div[style*="background: rgba(255, 255, 255, 0.1)"] {
   background: rgba(40, 40, 40, 0.7) !important;
 }
 
-/* Additional modifications to ensure text visibility on dark background */
+/* Text visibility */
 a {
   color: #ffffff;
 }
@@ -820,9 +790,10 @@ p, h1, h2, h3, h4, h5, h6 {
   color: #ffffff;
 }
 
+/* Shape dividers */
 .custom-shape-divider-bottom-1743750583 {
   position: absolute;
-  top: -163px; /* Adjust this value to control how much of the divider is visible */
+  top: -163px;
   left: -6%;
   width: 130%;
   overflow: hidden;
@@ -844,7 +815,7 @@ p, h1, h2, h3, h4, h5, h6 {
 .custom-shape-divider-top-1743757542 {
   position: absolute;
   padding-top: 100px;
-  bottom: -163px; /* Change from top: 0 to bottom: 0 */
+  bottom: -163px;
   left: 0;
   width: 100%;
   overflow: hidden;
@@ -862,31 +833,9 @@ p, h1, h2, h3, h4, h5, h6 {
   fill: #F5A623;
 }
 
-/** For mobile devices **/
-@media (max-width: 767px) {
-  .custom-shape-divider-top-1743757542 svg {
-      width: calc(129% + 1.3px);
-      height: 117px;
-  }
-}
-/** For mobile devices **/
-@media (max-width: 767px) {
-  .custom-shape-divider-bottom-1743750583 svg {
-      width: calc(129% + 1.3px);
-      height: 117px;
-  }
-}
-
-/* Add responsive adjustments */
-@media (max-width: 576px) {
-  .projects-container {
-    grid-template-columns: 1fr; /* Single column on very small screens */
-  }
-}
-
 /* Burger Menu Styles */
 .burger-menu-button {
-  display: none; /* Hidden by default, shown on mobile */
+  display: none;
   flex-direction: column;
   justify-content: space-between;
   width: 30px;
@@ -894,7 +843,7 @@ p, h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
   z-index: 1002;
   position: relative;
-  margin-right: 5px; /* Add a little extra margin on the right */
+  margin-right: 5px;
 }
 
 .burger-bar {
@@ -965,79 +914,148 @@ p, h1, h2, h3, h4, h5, h6 {
   color: #f36c18;
 }
 
-/* Media queries for responsive design */
+/* Responsive styles - consolidated */
 @media (max-width: 768px) {
+  /* Navigation changes */
   .desktop-nav {
-    display: none; /* Hide desktop navigation on mobile */
+    display: none;
   }
   
   .burger-menu-button {
-    display: flex; /* Show burger menu on mobile */
+    display: flex;
+  }
+  
+  /* Layout adjustments */
+  .contact-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .documentation {
+    padding: 10px;
+  }
+  
+  .documentation section {
+    padding: 15px;
+  }
+
+  /* Typography adjustments */
+  h1 {
+    font-size: 2rem;
+  }
+  
+  .intro-section h1 {
+    font-size: 2.5rem;
+  }
+  
+  .section-title {
+    margin-bottom: 0.5rem;
+  }
+
+  /* Hide desktop language switcher on mobile */
+  .header-language-switcher {
+    display: none;
   }
 }
 
-/* Shape Divider Mobile Adjustments */
 @media (max-width: 767px) {
+  /* Shape divider adjustments */
+  .custom-shape-divider-top-1743757542 svg,
+  .custom-shape-divider-bottom-1743750583 svg {
+    width: calc(129% + 1.3px);
+    height: 117px;
+  }
+  
   /* Top divider adjustments */
   .custom-shape-divider-bottom-1743750583 {
-    top: -99px; /* Reduce from -163px to bring it closer to content */
-    transform: rotate(180deg) scaleY(0.7); /* Scale down vertically to reduce gap */
+    top: -99px;
+    transform: rotate(180deg) scaleY(0.7);
   }
   
   /* Bottom divider adjustments */
   .custom-shape-divider-top-1743757542 {
-    bottom: -107px; /* Reduce from -163px to bring it closer to content */
-    padding-top: 60px; /* Reduce padding-top from 100px */
-    transform: scaleY(0.7); /* Scale down vertically to reduce gap */
+    bottom: -107px;
+    padding-top: 60px;
+    transform: scaleY(0.7);
   }
   
-  /* Adjust section spacing for mobile */
-  .about-container1 {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-  
-  /* Remove negative margin from traits section on mobile */
+  /* Section spacing adjustments */
   .traits-section {
-    margin-top: 20px; /* Change from negative to positive */
+    margin-top: 20px;
   }
   
-  /* Add more space at the bottom of skills section */
   .skills-section {
-    padding-bottom: 40px; /* Add more bottom padding */
+    padding-bottom: 40px;
   }
   
-  /* Add more space above the traits heading */
   .traits-section h3 {
     margin-top: 20px;
     padding-top: 20px;
   }
   
-  /* Ensure skill icons don't crowd the section below */
   .skills-icons {
-    margin-bottom: 20px; /* Extra margin at the bottom */
+    margin-bottom: 20px;
   }
   
-  /* Fix asymmetrical spacing on project boxes */
+  /* Project container adjustments */
   .projects-container {
-    width: calc(100% - 20px); /* Adjust width to account for margins */
-    margin-left: 10px; /* Equal margins on both sides */
+    width: calc(100% - 20px);
+    margin-left: 10px;
     margin-right: 10px;
-    padding: 15px; /* Less padding on mobile */
+    padding: 15px;
   }
   
-  /* Ensure the section doesn't add extra padding */
   .projects-section {
     padding-left: 0;
     padding-right: 0;
   }
   
-  /* Make sure individual project boxes have equal margins */
   .project-box {
     margin-left: 0;
     margin-right: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .form-row {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 576px) {
+  .projects-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile logo styles */
+@media screen and (max-width: 430px) {
+  .logo a {
+    font-size: 0;
+    width: 40px;
+    display: inline-block;
+    padding: 10px 0;
+  }
+  
+  .header {
+    background-color: transparent;
+  }
+  
+  /* Home icon instead of text */
+  .logo a::before {
+    content: "\f015";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: #ffffff;
+  }
+}
+
+/* iPhone-specific fixes */
+@media screen and (device-width: 393px) and (device-height: 852px),
+       screen and (device-width: 390px) and (device-height: 844px) {
+  .logo a {
+    font-size: 1.25rem;
+    padding-left: calc(env(safe-area-inset-left) + 10px);
   }
 }
 
@@ -1048,7 +1066,7 @@ p, h1, h2, h3, h4, h5, h6 {
        screen and (device-width: 430px) and (device-height: 932px),
        screen and (device-width: 375px) and (device-height: 812px) {
   
-  /* Apply safe areas to all major containers */
+  /* Apply safe areas to containers */
   .projects-section, .about-section, .intro-section, .contact-section {
     padding-left: env(safe-area-inset-left);
     padding-right: env(safe-area-inset-right);
@@ -1068,8 +1086,323 @@ p, h1, h2, h3, h4, h5, h6 {
     padding-top: max(10px, env(safe-area-inset-top));
   }
   
-  /* Add padding to the top of the page to account for Dynamic Island */
+  /* Adjust for notch/Dynamic Island */
   body {
     padding-top: env(safe-area-inset-top);
   }
+}
+
+/* Hide mobile language switcher on desktop */
+@media (min-width: 769px) {
+  .mobile-language-switcher {
+    display: none;
+  }
+}
+
+/* ===== ABOUT SECTION STYLES ===== */
+.about-container1 {
+  width: 100vw; /* Use viewport width instead */
+  background-color: #F5A623;
+  padding: 30px;
+  position: relative;
+  margin-top: 36px;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 36px;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  box-sizing: border-box;
+}
+
+/* About section styles from AboutSection.css */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.skill-item {
+  width: 100px;
+  height: 87px;
+  margin: -5px 2px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s;
+  z-index: 1;
+}
+
+.skill-item:hover {
+  transform: scale(1.1);
+}
+
+.triangle-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  z-index: -1;
+  transition: background-color 0.3s;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.triangle-up {
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.triangle-down {
+  clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+}
+
+.skill-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.content-up {
+  padding: 10px 0 0;
+  transform: translateY(5px);
+}
+
+.content-down {
+  padding: 0 0 10px;
+  transform: translateY(-5px);
+}
+
+.skill-icon {
+  font-size: 2rem;
+  margin-bottom: 0.3rem;
+}
+
+.three-column-layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.profile-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-image-container {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #f36c18;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  width: 100%;
+}
+
+.profile-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.7rem 1rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.profile-link i {
+  margin-right: 8px;
+}
+
+.resume-link {
+  background-color: #f36c18;
+}
+
+.linkedin-link {
+  background-color: #0077B5;
+}
+
+.github-link {
+  background-color: #333;
+}
+
+.compact-skills-section h3 {
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  color: #f36c18;
+  text-align: center;
+}
+
+.skills-rows {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  justify-content: center;
+}
+
+.skill-bubble {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(109, 51, 3, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.skill-bubble:hover {
+  transform: scale(1.2);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.skill-bubble i {
+  font-size: 1.8rem;
+}
+
+.traits-grid.compact {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.trait-card.compact {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.trait-card.compact:hover {
+  transform: translateY(-5px);
+}
+
+.trait-card.compact h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.trait-card.compact p {
+  line-height: 1.4;
+  font-size: 0.85rem;
+}
+
+/* ===== CONTACT SECTION STYLES ===== */
+.contact-container {
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  padding-bottom: 4rem;
+}
+
+/* Contact section styles from ContactSection.css */
+.contact-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 2rem;
+}
+
+.contact-item {
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.contact-item i {
+  margin-right: 1rem;
+  color: #f36c18;
+  font-size: 1.2rem;
+}
+
+.contact-form {
+  width: 100%;
+  max-width: 800px;
+  min-width: 300px;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 8px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.form-result {
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.form-result.success {
+  background-color: rgba(46, 204, 113, 0.2);
+  color: #2ecc71;
+}
+
+.form-result.error {
+  background-color: rgba(231, 76, 60, 0.2);
+  color: #e74c3c;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+textarea.form-control {
+  resize: vertical;
+}
+
+.submit-button {
+  background-color: #f36c18;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.submit-button:hover {
+  background-color: #e05c08;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 10px rgba(243, 108, 24, 0.3);
 }

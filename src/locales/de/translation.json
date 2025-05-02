@@ -54,13 +54,13 @@
         "description": "Eine Anwendung zur Planung von Mittagessen für die Woche."
       },
       "verschlusselungswebseite": {
-        "name": "Verschlüsselungswebseite",
+        "name": "Encryptify",
         "description": "Eine Website zum Verschlüsseln und Entschlüsseln von Nachrichten mit verschiedenen Algorithmen."
       }
     },
     "documentation": {
       "verschluesselung": {
-        "title": "Verschlüsselungswebseite",
+        "title": "Encryptify: Webanwendung zur Verschlüsselung und Entschlüsselung von Nachrichten",
         "task": {
           "title": "Aufgabenstellung",
           "content": "Die Aufgabe bestand darin, eine Applikation zu erstellen, mit der verschiedene Verschlüsselungsverfahren ausgewählt und angewendet werden können, sodass man untereinander verschlüsselte Nachrichten und eventuell Bilder austauschen kann. Unsere Gruppe (Kamil, Shaheer) hat sich entschieden, anstatt einer App eine Webseite zu erstellen."

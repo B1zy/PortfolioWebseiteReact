@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import './ContactSection.css';
 
 function ContactSection() {
   const { t } = useTranslation();
@@ -63,41 +62,11 @@ function ContactSection() {
   };
 
   return (
-    <div className="contact-container">
+    <div className="contact-container" id="contact">
       <h2 className="section-title">{t('contact.title')}</h2>
       <p className="section-subtitle">{t('contact.subtitle')}</p>
       
       <div className="contact-content">
-        <div className="contact-info">
-          <div className="contact-item">
-            <i className="fas fa-envelope"></i>
-            <span>K.Bielski.inf22@stud.bbbaden.ch</span>
-          </div>
-          <div className="contact-item">
-            <i className="fas fa-phone"></i>
-            <span>+78 652 02 42</span>
-          </div>
-          <div className="contact-item">
-            <i className="fas fa-map-marker-alt"></i>
-            <span>Lenzburg</span>
-          </div>
-          
-          <div className="social-links">
-            <a href="https://github.com/b1zy" 
-               target="_blank" 
-               rel="noopener noreferrer"
-               className="social-link">
-              <i className="fab fa-github"></i>
-            </a>
-            <a href="https://linkedin.com/in/kamil-bielski-98b28a281" 
-               target="_blank" 
-               rel="noopener noreferrer"
-               className="social-link">
-              <i className="fab fa-linkedin"></i>
-            </a>
-          </div>
-        </div>
-        
         <form className="contact-form" onSubmit={onSubmit}>
           
           {result && (
