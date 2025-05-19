@@ -80,7 +80,7 @@ function AboutSection() {
             </div>
             <div className="profile-links">
               <a
-                href="/PortfolioWebseiteReact/src/LebenslaufKamilBielski.pdf"
+                href="/PortfolioWebseiteReact/LebenslaufKamilBielski.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="profile-link resume-link"
