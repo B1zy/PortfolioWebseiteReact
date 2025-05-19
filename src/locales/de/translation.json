@@ -8,13 +8,13 @@
     },
     "intro": {
       "hello": "Hallo, ich bin",
-      "description1": "als IMS-Student habe ich gelernt, moderne Webapps mit React, HTML, CSS und JavaScript zu bauen. Ich lege Wert auf einfache, übersichtliche Oberflächen und durfte in Schulprojekten mit MS SQL sowie NoSQL-Datenbanken arbeiten.",
+      "description1": "Ich bin Informatik-Schüler und baue gerne übersichtliche und benutzerfreundliche Websites, wobei ich gerade Frontend-Entwicklung und Datenbanken erkunde. Ich lerne immer Neues dazu und habe Spass daran, kreative Ideen digital umzusetzen.",
       "description2": ""
     },
     "about": {
       "title": "Wer ich bin",
-      "bio": "Tech fasziniert mich – besonders, wenn's darum geht, knifflige Probleme zu knacken. Angefangen hab ich mit kleinen Spielen in GameMaker2 und Scratch. Das war geil, aber schon da hab ich gemerkt, wie sehr mich das fassziniert und freude bringt.",
-      "hobby": "Wenn ich nicht in der Schule bin, zocke ich gern, probiere neue Tools aus oder schwing mich ins Fitnessstudio, um mich auszupowern.",
+      "bio": "Ich bin IMS-Schüler mit wachsendem Interesse an Technik und Problemlösungen. Angefangen hat alles damit, dass ich aus reiner Neugier und Freude am Erschaffen kleine Spiele mit GameMaker und Scratch entwickelt habe.",
+      "hobby": "In meiner Freizeit zocke ich gerne, probiere neue Tools aus und gehe zum Ausgleich ins gym",
       "skills": "Meine Skills",
       "traits": {
         "title": "Meine Eigenschaften",

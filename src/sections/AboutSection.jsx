@@ -22,7 +22,8 @@ function AboutSection() {
     {svg: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
       color: "#3776AB"},
     {icon:"devicon-unity-plain colored", color: "#FFFFFF"},
-    {icon:"devicon-docker-plain colored", color: "#2496ED"}
+    {icon:"devicon-docker-plain colored", color: "#2496ED"},
+    {icon:"devicon-github-original colored", color: "#181717"}
   ];
 
   // Define the traits from translation keys

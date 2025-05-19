@@ -90,7 +90,18 @@ p, span, a:not(.logo a), li, button, input, textarea, label, div {
 .header-language-switcher select:hover {
   border-color: #f36c18;
 }
+/* Update existing styles for section titles and subtitles */
+.section-title {
+  font-size: 2.2rem;
+  margin-bottom: 0.8rem;
+  text-align: center;
+}
 
+.section-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
 /* Logo styles */
 .logo {
   padding: 10px 0;
@@ -572,7 +583,7 @@ button:hover {
   gap: 15px;
 }
 
-.social-links {
+social-links {
   display: flex;
   gap: 0.8rem;
 }
@@ -955,6 +966,53 @@ p, h1, h2, h3, h4, h5, h6 {
   .header-language-switcher {
     display: none;
   }
+
+  /* Fix contact section mobile centering */
+  .contact-container {
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+  }
+  
+  .contact-form {
+    padding: 1.5rem;
+    width: 100%;
+    min-width: unset; /* Remove minimum width constraint */
+    max-width: 100%;
+  }
+
+  /* Fix contact form overflow issue */
+  .contact-container {
+    padding: 2rem 15px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
+  
+  .contact-form {
+    width:90%;
+    max-width: 100%;
+    min-width: 0; /* Remove min-width constraint completely */
+    padding: 1.5rem;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+  
+  .form-group {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .submit-button {
+    width: auto;
+    padding: 0.8rem 1.5rem;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1089,6 +1147,17 @@ p, h1, h2, h3, h4, h5, h6 {
   /* Adjust for notch/Dynamic Island */
   body {
     padding-top: env(safe-area-inset-top);
+  }
+
+  /* Apply consistent padding to contact container */
+  .contact-container {
+    padding-left: max(15px, env(safe-area-inset-left));
+    padding-right: max(15px, env(safe-area-inset-right));
+    width: 100%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -1351,7 +1420,7 @@ p, h1, h2, h3, h4, h5, h6 {
 .contact-form {
   width: 100%;
   max-width: 800px;
-  min-width: 300px;
+  min-width: 0;
   background-color: rgba(255, 255, 255, 0.1);
   padding: 2rem;
   border-radius: 8px;
@@ -1405,4 +1474,77 @@ textarea.form-control {
   background-color: #e05c08;
   transform: translateY(-3px);
   box-shadow: 0 6px 10px rgba(243, 108, 24, 0.3);
+}
+
+/* Responsive styling for About section */
+@media (max-width: 1024px) {
+  /* Switch to two columns for medium screens */
+  .three-column-layout {
+    grid-template-columns: 1fr 2fr;
+    gap: 1.5rem;
+  }
+  
+  /* Skills section spans both columns */
+  .compact-skills-section {
+    grid-column: span 2;
+    margin-top: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Switch to single column for mobile */
+  .three-column-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  /* Make all sections take full width */
+  .profile-section,
+  .bio,
+  .compact-skills-section {
+    grid-column: 1;
+  }
+  
+  /* Center content on mobile */
+  .profile-section {
+    margin: 0 auto;
+    max-width: 300px;
+  }
+  
+  .bio {
+    text-align: center;
+  }
+  
+  /* Adjust skills display */
+  .skills-rows {
+    justify-content: center;
+  }
+  
+  /* Enhance trait cards on mobile */
+  .traits-grid.compact {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+/* Additional responsive fixes for very small screens */
+@media (max-width: 480px) {
+  .about-container1 {
+    padding: 20px 15px;
+  }
+  
+  .profile-image-container {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .skill-bubble {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .skill-bubble i {
+    font-size: 1.5rem;
+  }
 }
