@@ -80,7 +80,7 @@ function AboutSection() {
             </div>
             <div className="profile-links">
               <a
-                hrefhref="/PortfolioWebseiteReact/Modern Elegant Lebenslauf Beige Weiß-1.pdf"
+                href="/PortfolioWebseiteReact/src/LebenslaufKamilBielski.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="profile-link resume-link"
