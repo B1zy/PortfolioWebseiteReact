@@ -64,7 +64,7 @@ function App() {
   }, []);
 
   return (
-    <BrowserRouter basename="/PortfolioWebseiteReact">
+    <BrowserRouter basename="/">
       <ScrollToTop />
       <Particles
         id="tsparticles"
