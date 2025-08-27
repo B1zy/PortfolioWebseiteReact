@@ -4,9 +4,9 @@
   "version": "0.0.0",
   "homepage": "https://kamilbielski.ch",
   "type": "module",
-  "scripts": {
+    "scripts": {
     "predeploy": "npm run build --legacy-peer-deps",
-    "deploy": "gh-pages -d dist ",
+    "deploy": "gh-pages -d dist --cname kamilbielski.ch",
     "dev": "vite",
     "start": "vite dev",
     "build": "vite build",
