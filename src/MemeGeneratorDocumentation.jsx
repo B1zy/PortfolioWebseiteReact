@@ -59,7 +59,7 @@ function MemeGeneratorDocumentation() {
         <h3>{t('documentation.memeGenerator.demonstration.title')}</h3>
         <p>{t('documentation.memeGenerator.demonstration.content')}</p>
         <video controls style={{ maxWidth: '100%', borderRadius: '10px' }}>
-          <source src="/PortfolioWebseiteReact/videos/116434-2024-01-06 16-06-33.mp4" type="video/mp4" />
+          <source src="/videos/116434-2024-01-06 16-06-33.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </section>

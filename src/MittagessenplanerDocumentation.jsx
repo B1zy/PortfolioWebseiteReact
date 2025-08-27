@@ -42,12 +42,12 @@ function MittagessenplanerDocumentation() {
 
         <p>{t('documentation.mittagessenplaner.product.video')}</p>
         <video controls style={{ maxWidth: '100%', borderRadius: '10px' }}>
-          <source src="/PortfolioWebseiteReact/videos/2024-06-16 21-11-36.mp4" type="video/mp4" />
+          <source src="/videos/2024-06-16 21-11-36.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
 
         <p>{t('documentation.mittagessenplaner.product.screenshot')}</p>
-        <img src="/PortfolioWebseiteReact/images/122288-Screenshot 2024-06-16 211919.png" alt="MongoDB Users" style={{ maxWidth: '100%', borderRadius: '10px', marginTop: '20px' }} />
+        <img src="/images/122288-Screenshot 2024-06-16 211919.png" alt="MongoDB Users" style={{ maxWidth: '100%', borderRadius: '10px', marginTop: '20px' }} />
 
         <p>
           <a href="https://github.com/B1zy/LA1305-Jahr-2" target="_blank" rel="noopener noreferrer">

@@ -72,7 +72,7 @@ function AboutSection() {
           <div className="profile-section">
             <div className="profile-image-container">
               <img
-                src="/PortfolioWebseiteReact/images/Lebenslauf_KamilBielski.jpeg"
+                src="/images/Lebenslauf_KamilBielski.jpeg"
                 loading ="lazy"
                 alt="Developer Portrait"
                 className="profile-image"
@@ -80,7 +80,7 @@ function AboutSection() {
             </div>
             <div className="profile-links">
               <a
-                href="/PortfolioWebseiteReact/files/LebenslaufKamilBielski.pdf"
+                href="/files/LebenslaufKamilBielski.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="profile-link resume-link"

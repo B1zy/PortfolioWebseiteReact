@@ -36,7 +36,7 @@ function GeographieQuizDocumentation() {
           {t('documentation.geographieQuiz.product.content')}
         </p>
         <p>{t('documentation.geographieQuiz.product.flowchart')}</p>
-        <img src="/PortfolioWebseiteReact/images/geoquiz-flowchart.png" alt="Geographie Quiz Flowchart" />
+        <img src="/images/geoquiz-flowchart.png" alt="Geographie Quiz Flowchart" />
         <p>
           <a href="https://github.com/B1zy/LA1301-Jahr-2/tree/main" target="_blank" rel="noopener noreferrer">
             {t('documentation.geographieQuiz.product.repo')}
@@ -48,7 +48,7 @@ function GeographieQuizDocumentation() {
         <h3>{t('documentation.geographieQuiz.demonstration.title')}</h3>
         <p>
           {t('documentation.geographieQuiz.demonstration.content')}
-          <img src= "/PortfolioWebseiteReact/images/111429-209092384-5d58bdca-0a9b-417f-97a6-1b3311c6ef0b.png" alt="Geographie Quiz Wrong Answer" />
+          <img src= "/images/111429-209092384-5d58bdca-0a9b-417f-97a6-1b3311c6ef0b.png" alt="Geographie Quiz Wrong Answer" />
         </p>
       </section>
 
