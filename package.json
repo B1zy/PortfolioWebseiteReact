@@ -2,7 +2,7 @@
   "name": "protfoliowebseitereact",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://B1zy.github.io/PortfolioWebseiteReact/",
+  "homepage": "https://kamilbielski.ch",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build --legacy-peer-deps",

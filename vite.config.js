@@ -14,7 +14,7 @@ export default defineConfig({
       ext: '.br',
     })
   ],
-  base: '/PortfolioWebseiteReact/',
+  base: '/',
   build: {
     outDir: 'dist'  // change output folder to "build"
   }
